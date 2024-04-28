@@ -1,38 +1,86 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Min-Geun Park",
+    "label": "Mechanical Engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
+    "email": "geunee20@gmail.com",
+    "phone": "+1 (678) 918-1981 | +82 (010) 7332-0607",
     "url": "https://alshedivat.github.io/al-folio/",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "525 Hunnicutt Rd SE",
+      "postalCode": "GA 30126",
+      "city": "Mableton",
       "countryCode": "US",
-      "region": "California"
+      "region": "Georgia"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Linkedin",
+        "username": "geunee20",
+        "url": "https://www.linkedin.com/in/mingeun-park/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "name": "Advanced Intelligent Mechatronics Research Laboratory (AIMRL) - Georgia Tech",
+      "position": "Graduate Research Assistant",
+      "url": "https://aimrl.gatech.edu/",
+      "startDate": "2023-08-14",
+      "endDate": "Present",
+      "summary": "In the Magnetic Leadscrew (ML) project, I enhanced system functionality by refining components, validated theoretical simulations through experiments, and modeled the ML using transfer functions. I also developed an Arduino-based control system to achieve precise position and force control.",
+      "highlights": ["Advisor: Prof. Kok-Meng Lee", "Mentor: Wenjing Li", "Keywords: Mechatronics, Nonlinear Control"]
+    },
+
+    {
+      "name": "Georgia Institute of Technology",
+      "position": "Graduate Teaching Assistant",
+      "startDate": "2023-08-14",
+      "endDate": "Present",
+      "summary": "For the course ME4452 - Control Dynamic Systems, I conducted two-hour weekly office hours and delivered comprehensive review lectures, significantly aiding over 30 students in understanding complex concepts in control systems engineering. I received a 4.54/5 average in TA evaluations, with 100% of students endorsing me for future courses.",
+      "highlights": ["Instructor: Prof. Kok-Meng Lee", "Topics: Control System Analysis/Design"]
+    },
+
+    {
+      "name": "Samsung Electronics",
+      "position": "Research Engineer Intern",
+      "startDate": "2023-07-01",
+      "endDate": "2023-08-11",
+      "summary": "I evaluated the repeatability of a KUKA robot arm in compliance with ISO 9283 standards, using the Robot Operating System (ROS) and a Leica laser tracker for accurate measurements and detailed analysis.",
+      "highlights": ["Robotics", "Robot Operating System (ROS)"]
+    },
+
+    {
+      "name": "Adaptive Robotic Manipulation (ARM) Laboratory - Georgia Tech",
+      "position": "Undergraduate Research Assistant",
+      "url": "https://armlab.gatech.edu/",
+      "startDate": "2021-08-16",
+      "endDate": "2022-12-06",
+      "summary": "I contributed to the development of an underactuated gripper using controllable stiffness joints. I developed a control system for adjusting air pressure in the joints to control their stiffness and created a test bed to analyze finger-object interaction, focusing on the impact of joint stiffness on dexterity. Additionally, I led a team of three students in project coordination, task delegation, and performance optimization to efficiently achieve project goals.",
+      "highlights": ["Advisor: Prof. Frank Hammond", "Mentor: Dr. Elizabeth Fox", "Variable Stiffness", "Underactuated Gripper"]
+    },
+
+    {
+      "name": "Samsung Electronics",
+      "position": "Research Engineer Intern",
+      "startDate": "2022-06-27",
+      "endDate": "2022-08-8",
+      "summary": "I developed a TensorFlow-based anomaly classification model for image data, achieving an impressive top-1 accuracy of 92%. Additionally, I conducted a comprehensive seminar on deep learning for team members interested in integrating AI into their research. The seminar covered fundamental AI concepts, effective training methodologies, and essential troubleshooting strategies, equipping my colleagues with the knowledge to leverage AI technologies effectively.",
+      "highlights": ["Anomaly Detection", "Image Classification", "TensorFlow"]
+    },
+
+    {
+      "name": "Robotics Lab - POSTECH",
+      "position": "Undergraduate Research Assistant",
+      "url": "http://rnb.postech.ac.kr/",
+      "startDate": "2020-08-31",
+      "endDate": "2021-03-05",
+      "summary": "Ieveloped a multisensory anomaly detection system for mobile robots in smart factories, employing RANSAC-Flow and f-AnoGAN algorithms to analyze the spatiotemporal context of thermal videos. The system, implemented using PyTorch, enhances the capabilities of mobile surveillance robots by efficiently detecting anomalies in dynamic factory environments.",
+      "highlights": ["Anomaly Detection", "Pytorch"]
     }
   ],
+  
   "volunteer": [
     {
       "organization": "People's Climate March",
