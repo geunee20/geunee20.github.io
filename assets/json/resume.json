@@ -108,6 +108,15 @@
     },
 
     {
+      "name": "Dynamics of a Triple Pendulum",
+      "summary": "Conducted a simulation of a triple pendulum's dynamics using the Euler-Lagrange equations to derive its motion equations, and implemented the simulation in Python.",
+      "highlights": ["Dynamics", "Bifurcation"],
+      "url": "",
+      "startDate": "2023-08",
+      "endDate": "2023-12"
+    },
+
+    {
       "name": "Adaptive Cornhole Assistant Tool for Individuals with Spinal Cord Injuries",
       "summary": "Designed an ergonomic shovel-shaped assistant tool to assist cornhole game.",
       "highlights": ["Finite Element Analysis - Ansys", "Design Optimization"],
@@ -138,10 +147,11 @@
 
   "volunteer": [
     {
-      "organization": "Georgia Institute of Technology",
+      "organization": "Atlanta Science Festival",
       "position": "Volunteering Staff",
       "url": "https://research.gatech.edu/ATLScienceFestival",
       "startDate": "2024-03-08",
+      "endDate": "2024-03-08",
       "summary": "Demonstrated building cardboard hands and exhibit a real robotic hand"
     },
 
@@ -153,17 +163,21 @@
       "endDate": "2016-08-15",
       "summary": "Instructed students in a rural area with limited education resources."
     },
+
     {
-      "organization": "Exchange Student Assisting Program",
-      "position": "Student Assistant",
-      "url": "",
+      "organization": "SKKU Global Mentoring and Assisting People",
+      "position": "Student Buddy",
+      "url": "https://webzine-skku-edu.translate.goog/skkuzine/section/coverStory.do?mode=list&articleNo=34199&_x_tr_sl=ko&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp",
       "startDate": "2016-03-10",
       "endDate": "2016-12-15",
       "summary": "Facilitated cultural adaptation and integration for international students in Korea by leading cultural exchange programs."
     }
   ],
 
-  "memberships": [{ "organization": "Georgia Tech chapter of the American Society of Mechanical Engineers", "startDate": "2023-08-16" }],
+  "memberships": [
+    { "organization": "Institute of Electrical and Electronics Engineers (IEEE)", "startDate": "2024-04-29" },
+    { "organization": "Georgia Tech chapter of the American Society of Mechanical Engineers", "startDate": "2023-08-16" }
+  ],
 
   "languages": [
     {
