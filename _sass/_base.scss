@@ -483,6 +483,10 @@ footer.sticky-bottom {
   color: var(--global-text-color);
 }
 
+.table-cv-map .left-column {
+  width: 100px; /* Fixed width for the left column */
+}
+
 // Repositories
 
 @media (min-width: 768px) {
