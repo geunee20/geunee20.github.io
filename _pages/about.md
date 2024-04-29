@@ -6,7 +6,7 @@ subtitle: Beyond the End of Disability, Toward Diversity. I aspire to be a pione
 
 profile:
   align: right
-  image: 1_main.png
+  image: about_main.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
