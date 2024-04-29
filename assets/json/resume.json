@@ -103,7 +103,8 @@
       "summary": "Performed Finite Element Analysis (FEA) to optimize a roboti arm's design.",
       "highlights": ["Finite Element Analysis - Ansys", "Design Optimization"],
       "url": "",
-      "startDate": "2024"
+      "startDate": "2024-01",
+      "endDate": "2024-04"
     },
 
     {
@@ -111,7 +112,8 @@
       "summary": "Designed an ergonomic shovel-shaped assistant tool to assist cornhole game.",
       "highlights": ["Finite Element Analysis - Ansys", "Design Optimization"],
       "url": "",
-      "startDate": "2023"
+      "startDate": "2023-01",
+      "endDate": "2024-04"
     },
 
     {
