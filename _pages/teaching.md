@@ -12,7 +12,7 @@ nav_order: 3
 ### Georgia Institute of Technology
 
 <p style="margin-bottom: 0;">
-  <strong>ME4452 - Control of Dynamic Systems</strong> 
+  <strong>ME4452 - Control of Dynamic Systems</strong> <br>
   <span style="margin-left: 20px;"><em>Spring '24, Fall '23</em></span>
 </p>
 
