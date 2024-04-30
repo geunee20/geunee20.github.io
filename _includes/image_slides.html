@@ -39,7 +39,7 @@
       slideIndices[sliderId].index = totalSlides;
     }
     for (i = 0; i < totalSlides; i++) {
-      slides[i].style.transform = "translateX(" + -100.6 * (slideIndices[sliderId].index - 1) + "%)";
+      slides[i].style.transform = "translateX(" + -100 * (slideIndices[sliderId].index - 1) + "%)";
     }
     var slideWidth = (slideIndices[sliderId].index / totalSlides) * 100;
     sliderBar.style.width = slideWidth + "%";
@@ -74,6 +74,7 @@
     overflow: hidden;
     white-space: nowrap;
     align-items: center;
+    font-size: 0;
   }
 
   .mySlides {
