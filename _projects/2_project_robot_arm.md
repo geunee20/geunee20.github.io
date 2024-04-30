@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: Robot Arm Design Optimization
+description: Finite Element Analysis for Durability and Weight Optimization of a Robotic Arm
 img: assets/img/3.jpg
-importance: 2
-category: work
+date: 2023-06-01
+category: Work
 giscus_comments: true
 ---
 
