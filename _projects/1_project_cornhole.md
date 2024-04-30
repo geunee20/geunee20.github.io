@@ -2,7 +2,7 @@
 layout: page
 title: Make Cornhole Playable Again
 description: Adaptive Cornhole Assistant Tools for People with Spinal Cord Injuries
-img: assets/img/projects/cornhole/thumbnail.jpeg
+img: assets/img/projects/1_cornhole/thumbnail.jpeg
 date: 2023-05-01
 category: Work
 ---
@@ -38,6 +38,8 @@ category: Work
         width: 100%;
         padding-top: 82.5%; 
         overflow: hidden;
+        overflow: auto; /* Allows scrolling inside the container if needed */
+        cursor: move; /* Changes the cursor to indicate movability */
     }
     .pdf-container embed {
         position: absolute;

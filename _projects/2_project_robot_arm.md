@@ -2,8 +2,8 @@
 layout: page
 title: Robot Arm Optimization
 description: Finite Element Analysis for Durability and Weight Optimization in Robotic Arm Design
-img: assets/img/projects/robotArm/thumbnail.gif
-date: 2023-06-01
+img: assets/img/projects/2_robotArm/thumbnail.gif
+date: 2024-01-01
 category: Work
 ---
 
@@ -19,19 +19,3 @@ category: Work
 ### Final Report
 
 <a href="/assets/pdf/projects/2_robotArm/FinalReport.pdf" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">View Final Report</a>
-
-<style>
-    .pdf-container {
-        position: relative;
-        width: 100%;
-        padding-top: 82.5%; 
-        overflow: hidden;
-    }
-    .pdf-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
