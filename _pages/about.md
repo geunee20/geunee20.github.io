@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: About me
 permalink: /
 subtitle: Beyond the End of Disability, Toward Diversity. I aspire to be a pioneer in the field of limb augmentation.
 
@@ -9,17 +9,17 @@ profile:
   image: about_main.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Master's student</p>
+    <p>Mechanical Engineering</p>
+    <p>Georgia Institute of Technology</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hello! My name is Min-Geun Park, and I am currently pursuing a Master's degree in Mechatronics and Control Systems at the [Advanced Intelligent Mechatronics Research Laboratory (AIMRL)](https://aimrl.gatech.edu/) at Georgia Institute of Technology, where I also completed my B.S. in Mechanical Engineering.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests are centered around nonlinear control theory, controller design, and mechatronics. I am actively involved in a project focusing on the [Magnetic Leadscrew (ML)](https://ieeexplore.ieee.org/abstract/document/10202569), guided by [Prof. Kok-Meng Lee](https://aimrl.gatech.edu/kmlee.html) and mentored by [Wenjing Li](https://www.linkedin.com/in/wenjing-li-48830616a/). I am looking to broaden my research into areas such as robotics, autonomous systems, and wearable technology and am seeking a Ph.D. position to explore these interdisciplinary fields further.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Outside of academics, I enjoy developing mobile applications, surfing, and snowboarding.

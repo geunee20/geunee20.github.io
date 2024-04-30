@@ -1,0 +1,134 @@
+<!-- _includes/image_slides.html -->
+<div class="wrapper">
+  <div class="slideshow-container" id="{{ include.slider_id }}">
+    {% for image in include.images %}
+    <div class="mySlides {{ include.slider_id }}">
+      <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}" class="slide-image" />
+    </div>
+    {% endfor %}
+    <a class="prev" onclick="plusSlides(-1, '{{ include.slider_id }}')">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, '{{ include.slider_id }}')">&#10095;</a>
+  </div>
+  <div class="slider-bar-container {{ include.slider_id }}">
+    <div class="slider-bar"></div>
+  </div>
+</div>
+
+<script>
+  // Initialize slide index for each slider
+  var slideIndices = {};
+
+  function plusSlides(n, sliderId) {
+    clearInterval(slideIndices[sliderId].timer);
+    showSlides((slideIndices[sliderId].index += n), sliderId);
+    slideIndices[sliderId].timer = setInterval(function () {
+      plusSlides(1, sliderId);
+    }, 3000);
+  }
+
+  function showSlides(n, sliderId) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides " + sliderId);
+    var sliderBar = document.querySelector(".slider-bar-container." + sliderId + " .slider-bar");
+    var totalSlides = slides.length;
+
+    if (n > totalSlides) {
+      slideIndices[sliderId].index = 1;
+    }
+    if (n < 1) {
+      slideIndices[sliderId].index = totalSlides;
+    }
+    for (i = 0; i < totalSlides; i++) {
+      slides[i].style.transform = "translateX(" + -100.6 * (slideIndices[sliderId].index - 1) + "%)";
+    }
+    var slideWidth = (slideIndices[sliderId].index / totalSlides) * 100;
+    sliderBar.style.width = slideWidth + "%";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var allSliders = document.querySelectorAll(".slideshow-container");
+    allSliders.forEach(function (slider) {
+      var id = slider.id;
+      slideIndices[id] = {
+        index: 1,
+        timer: setInterval(function () {
+          plusSlides(1, id);
+        }, 3000),
+      };
+      showSlides(1, id); // Initialize slides
+    });
+  });
+</script>
+
+<style>
+  .wrapper {
+    width: 80%;
+    margin: auto;
+    height: auto;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+  }
+
+  .mySlides {
+    display: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    white-space: normal;
+    transition: transform 0.5s ease;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .slider-bar-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .slider-bar {
+    height: 5px;
+    background-color: #4caf50;
+    width: 0%; /* Initial width */
+    position: absolute;
+    transition: width 0.4s ease-in-out;
+  }
+</style>
