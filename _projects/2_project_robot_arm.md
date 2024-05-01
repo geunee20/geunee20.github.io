@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Robot Arm Optimization
-description: Finite Element Analysis for Durability and Weight Optimization in Robotic Arm Design
+description: Finite Element Analysis for Durability and Weight Optimization in Robot Arm Design
 img: assets/img/projects/2_robotArm/thumbnail.gif
 date: 2024-01-01
 category: Work
