@@ -7,9 +7,9 @@ nav: true
 nav_order: 3
 ---
 
-<a id="me4452"></a>
-
 ### Georgia Institute of Technology
+
+<a id="me4452"></a>
 
 <p style="margin-bottom: 0;">
   <strong>ME4452 - Control of Dynamic Systems</strong> <br>
