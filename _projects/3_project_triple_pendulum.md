@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Triple Pendulum
-description: Develop a mathematical model to estimate the motion of a triple pendulum.
+description: Develop a computational tool to mathematically estimate the motion of a triple pendulum.
 img: assets/img/projects/3_tripplePendulum/thumbnail.gif
 date: 2023-12-01
 category: Work
