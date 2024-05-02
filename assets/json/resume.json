@@ -99,14 +99,6 @@
 
   "projects": [
     {
-      "name": "SetGo",
-      "summary": "Developing a random route generating app",
-      "highlights": ["React Native", "Node JS"],
-      "url": "/projects/5_project_setGo/",
-      "startDate": "2023-08"
-    },
-
-    {
       "name": "Robot Arm Optimization",
       "summary": "Performed Finite Element Analysis (FEA) to optimize a roboti arm's design.",
       "highlights": ["Finite Element Analysis - Ansys", "Design Optimization"],
@@ -122,15 +114,6 @@
       "url": "/projects/3_project_triple_pendulum/",
       "startDate": "2023-08",
       "endDate": "2023-12"
-    },
-
-    {
-      "name": "eBooth - find/boost your event",
-      "summary": "Developed a school community application for sharing information about any events within school.",
-      "highlights": ["React Native", "Node JS"],
-      "url": "/projects/4_project_ebooth/",
-      "startDate": "2022-12",
-      "endDate": "2023-08"
     },
 
     {
