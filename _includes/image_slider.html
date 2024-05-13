@@ -3,7 +3,7 @@
   <div class="slideshow-container" id="{{ include.slider_id }}">
     {% for image in include.images %}
     <div class="mySlides {{ include.slider_id }}">
-      <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}" class="slide-image" />
+      <img src="{{ image.path | absolute }}" alt="{{ image.alt }}" class="slide-image" />
     </div>
     {% endfor %}
     <a class="prev" onclick="plusSlides(-1, '{{ include.slider_id }}')">&#10094;</a>
