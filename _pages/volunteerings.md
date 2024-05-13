@@ -44,7 +44,7 @@ _March 2024_
 
 I was a volunteering staff at the [Atlanta Science Festival](https://research.gatech.edu/ATLScienceFestival). I prepared approximately 300 demo materials for the big weekend event. On the event day, at the DIY Robotic Hand Booth, I demonstrated how to build cardboard hands and showcased a real robotic hand for children to see and interact with.
 
-{% include image_slides.html images=page.images_asf slider_id="slider_asf" %}
+{% include image_slider.html images=page.images_asf slider_id="slider_asf" %}
 
 ---
 
@@ -56,7 +56,7 @@ _December 2015 - December 2016_
 
 As a [Student Buddy](https://webzine-skku-edu.translate.goog/skkuzine/section/coverStory.do?mode=list&articleNo=34199&_x_tr_sl=ko&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp), I organized and led diverse cultural exchange programs in Korea, including hiking excursions, participation in the World Food Festival, Seoul Tour Marathon, and visits to the Korean Folk Village. These initiatives not only facilitated cultural adaptation and integration for international students but also significantly enriched my appreciation of diverse cultures. Engaging with students from various backgrounds during these activities, I felt a profound sense of accomplishment and connection as we shared experiences and learned from each other. This role enhanced cross-cultural understanding and fostered a supportive international community, leaving me with lasting impressions of joy and mutual respect.
 
-{% include image_slides.html images=page.images_maple slider_id="slider_maple" %}
+{% include image_slider.html images=page.images_maple slider_id="slider_maple" %}
 
 ---
 
