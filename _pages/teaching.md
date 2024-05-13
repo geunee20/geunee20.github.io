@@ -26,7 +26,7 @@ nav_order: 3
   <li>
     Review Sessions
   </li>
-<table style="border-collapse: collapse; width: 50%;">
+<table style="border-collapse: collapse; width: 80%;">
   <tr>
     <td style="border: none; padding: 5px;"><strong>Spring '24</strong></td>
     <td style="border: none; padding: 5px;"><a href="/teachings/3_24_Sp_MT1" style="text-decoration: none; color: inherit;">Midterm 1</a></td>
