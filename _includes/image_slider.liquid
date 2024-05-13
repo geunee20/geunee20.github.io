@@ -1,10 +1,9 @@
-<!-- _includes/image_slider.html -->
 <div class="wrapper">
   <div class="slideshow-container" id="{{ include.slider_id }}">
     {% for image in include.images %}
-    <div class="mySlides {{ include.slider_id }}">
-      <img src="{{ image.path | absolute }}" alt="{{ image.alt }}" class="slide-image" />
-    </div>
+      <div class="mySlides {{ include.slider_id }}">
+        <img src="{{ image.path | absolute }}" alt="{{ image.alt }}" class="slide-image">
+      </div>
     {% endfor %}
     <a class="prev" onclick="plusSlides(-1, '{{ include.slider_id }}')">&#10094;</a>
     <a class="next" onclick="plusSlides(1, '{{ include.slider_id }}')">&#10095;</a>
@@ -28,8 +27,8 @@
 
   function showSlides(n, sliderId) {
     var i;
-    var slides = document.getElementsByClassName("mySlides " + sliderId);
-    var sliderBar = document.querySelector(".slider-bar-container." + sliderId + " .slider-bar");
+    var slides = document.getElementsByClassName('mySlides ' + sliderId);
+    var sliderBar = document.querySelector('.slider-bar-container.' + sliderId + ' .slider-bar');
     var totalSlides = slides.length;
 
     if (n > totalSlides) {
@@ -39,14 +38,14 @@
       slideIndices[sliderId].index = totalSlides;
     }
     for (i = 0; i < totalSlides; i++) {
-      slides[i].style.transform = "translateX(" + -100 * (slideIndices[sliderId].index - 1) + "%)";
+      slides[i].style.transform = 'translateX(' + -100 * (slideIndices[sliderId].index - 1) + '%)';
     }
     var slideWidth = (slideIndices[sliderId].index / totalSlides) * 100;
-    sliderBar.style.width = slideWidth + "%";
+    sliderBar.style.width = slideWidth + '%';
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    var allSliders = document.querySelectorAll(".slideshow-container");
+  document.addEventListener('DOMContentLoaded', function () {
+    var allSliders = document.querySelectorAll('.slideshow-container');
     allSliders.forEach(function (slider) {
       var id = slider.id;
       slideIndices[id] = {
