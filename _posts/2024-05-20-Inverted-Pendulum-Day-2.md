@@ -88,18 +88,18 @@ Videos 1 through 4 demonstrate the behavior of the system from various initial s
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/01_fixed_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/01_fixed_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/02_fixed_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/02_fixed_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/03_fixed_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/03_fixed_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/04_fixed_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/04_fixed_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -124,18 +124,18 @@ Videos 5 through 9 demonstrate the robust regulating capabilities of the control
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/05_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/05_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/06_fixed_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/06_fixed_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/07_fixed_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/07_fixed_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/08_fixed_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/08_fixed_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -177,18 +177,18 @@ Videos 9 through 12 showcase the robust tracking capabilities of the control sys
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/09_moving_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/09_moving_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/10_moving_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/10_moving_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/11_moving_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/11_moving_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/12_moving_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/12_moving_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -215,18 +215,18 @@ Specifically, Videos 13 to 15 demonstrate conditions with low base density under
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/13_moving_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/13_moving_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/14_moving_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/14_moving_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/15_moving_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/15_moving_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/16_moving_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-20-Inverted-Pendulum-Day-2/16_moving_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">

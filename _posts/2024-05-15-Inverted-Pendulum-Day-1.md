@@ -87,7 +87,7 @@ Video 1 illustrates a non-chaotic motion resulting from a specific initial angle
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/01_fixed_non_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/01_fixed_non_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -109,7 +109,7 @@ Conversely, Video 2 captures the onset of chaotic behavior under a slightly alte
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/02_fixed_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/02_fixed_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -158,7 +158,7 @@ Video 3 depicts a non-chaotic motion resulting from a specific initial angle and
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/03_moving_non_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/03_moving_non_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
@@ -178,7 +178,7 @@ Conversely, Video 4 and Figure 11, akin to Video 2 and Figure 7, display the cha
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/04_moving_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        {% include video.liquid path="assets/video/posts/2024-05-15-Inverted-Pendulum-Day-1/04_moving_chaotic_motion.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
     </div>
 </div>
 <div class="caption">
