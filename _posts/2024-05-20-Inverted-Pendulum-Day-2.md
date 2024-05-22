@@ -2,7 +2,7 @@
 layout: post
 title: "[Inverted Pendulum] Day 2 - Fully Actuated Pendulum / PID Controller"
 date: 2024-05-20 00:00:00-0400
-description: Exploring the dynamics of a pendulum by constructing and simulating a multibody system using Simscape.
+description: An in-depth exploration of a fully actuated triple pendulum system using a PID controller, with its tracking accuracy, and regulation effectiveness.
 tags: Simulink Control Inverted_Pendulum
 categories: Study_with_Me
 disqus_comments: true
