@@ -2,18 +2,22 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      <a class="navbar-brand title font-weight-light" href="{{ site.baseurl }}/">
-        {% if site.first_name %}
-          <span class="name font-weight-bold">
-            {{- site.first_name -}}
-          </span>
-        {% endif %}
-        {% if site.last_name %}
-          <span class="name">
-            {{- site.last_name -}}
-          </span>
-        {% endif %}
-      </a>
+      {% if page.permalink == '/' %}
+        <div class="navbar-brand social">{% include social.liquid %}</div>
+      {% else %}
+        <a class="navbar-brand title font-weight-light" href="{{ site.baseurl }}/">
+          {% if site.first_name %}
+            <span class="name font-weight-bold">
+              {{- site.first_name -}}
+            </span>
+          {% endif %}
+          {% if site.last_name %}
+            <span class="name">
+              {{- site.last_name -}}
+            </span>
+          {% endif %}
+        </a>
+      {% endif %}
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
