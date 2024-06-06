@@ -40,16 +40,16 @@ $$ f_x, \tau_1 $$).
 Let the following is the equation of motion of a double pendulum.
 
 $$
-\begin{bmatrix}\tau_1 \\ \tau_2 \end{bmatrix} = \begin{bmatrix} A_{1, 1} & A_{1, 2} \\ A_{2, 1} & A_{2, 2} \end{bmatrix}\begin{bmatrix}\ddot{\theta}_1 \\ \ddot{\theta}_2 \end{bmatrix} + \begin{bmatrix} B_{1, 1}\dot{\theta}_2^2 + B_{1, 2}\dot{\theta}_1\dot{\theta}_2 \\ B_{2, 1}\dot{\theta}_1^2 \end{bmatrix} + \begin{bmatrix} C_{1} \\ C_{2}\end{bmatrix}g
+\begin{bmatrix}\tau_1 \\ \tau_2 \end{bmatrix} = \begin{bmatrix} M_{1, 1} & M_{1, 2} \\ M_{2, 1} & M_{2, 2} \end{bmatrix}\begin{bmatrix}\ddot{\theta}_1 \\ \ddot{\theta}_2 \end{bmatrix} + \begin{bmatrix} h_{1, 1}\dot{\theta}_2^2 + h_{1, 2}\dot{\theta}_1\dot{\theta}_2 \\ h_{2, 1}\dot{\theta}_1^2 \end{bmatrix} + \begin{bmatrix} g_{1} \\ g_{2}\end{bmatrix}g
 $$
 
 Where:
 
-- **Matrix A (Inertial Term)**: Represents the Newtonian response of the system to applied forces, accounting for the inertia of the masses.
-- **Matrix B (Coriolis and Centrifugal Forces)**:
+- **Matrix M (Inertial Term)**: Represents the Newtonian response of the system to applied forces, accounting for the inertia of the masses.
+- **Matrix h (Coriolis and Centrifugal Forces)**:
   - **Centrifugal Force**: Arises from terms like $$\dot{\theta}_1^2, \dot{\theta}_2^2$$ and affects the system when rotating.
   - **Coriolis Force**: Results from terms like $$\dot{\theta}_1\dot{\theta}_2$$ and is evident when components of the system move relative to one another.
-- **Matrix C (Gravitational Term)**: Accounts for the force due to gravity acting on each mass component.
+- **Matrix g (Gravitational Term)**: Accounts for the force due to gravity acting on each mass component.
 
 ### C. Derivation of Jacobians
 
