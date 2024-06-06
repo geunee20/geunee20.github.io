@@ -17,7 +17,14 @@ A fully actuated system is one in which the number of independent actuators matc
 
 For example, a fully actuated pendulum is easier to control because each degree of freedom—whether it involves rotation or translation—is directly managed by an independent actuator. This direct manipulation allows for precise adjustments to the pendulum’s position and motion, simplifying the control algorithms needed for maintaining stability and achieving desired behaviors. In such systems, the control can often be accomplished using linear controllers, though an understanding of nonlinear dynamics is still beneficial for optimizing performance and handling more complex scenarios.
 
-Today, I will simulate the PID controller, which is the simplest and most representative type of linear controller.
+Today, I will simulate the PID controller, which is the simplest and most representative type of linear controller. The block diagram of the PID controller system is presented in Figure 0. I added this at the end and chose not to update the figure numbering.
+
+<div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-20-Inverted-Pendulum-Day-2/00_block_diagram.png" class="img-fluid rounded z-depth-1" %}
+</div>
+<div class="caption">
+    Figure 0. Block Diagram of the PID Controller System
+</div>
 
 # I. A Pendulum System with a Fixed Base
 
