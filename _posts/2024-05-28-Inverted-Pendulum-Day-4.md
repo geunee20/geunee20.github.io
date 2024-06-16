@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[Inverted Pendulum] Day 4 - Fully Actuated Pendulum / PID Control with Gravity Compensation"
+title: "[Inverted Pendulum] Day 4 - Fully Actuated Pendulum / PID Control with Gravity Compensation Method"
 date: 2024-05-28 00:00:00-0400
-description: Optimizing pendulum control through advanced PID strategies integrated with gravity compensation to enhance system response and stability.
+description: Optimizing pendulum control through advanced PID strategies integrated with gravity compensation method to enhance system response and stability.
 tags: Simulink Control Inverted_Pendulum
 categories: Study_with_Me
 disqus_comments: true
@@ -15,7 +15,7 @@ images:
 
 A PID control system is valued for its straightforward design, as it does not necessitate a detailed understanding of the dynamic equations governing a triple pendulum. However, this simplicity can also be a drawback. The system may overreact or destabilize because it does not account for complex dynamics. Additionally, PID controllers often struggle with balancing between faster response and overshoot, and designing an effective system can be challenging due to its inherent limitations in handling nonlinear behaviors.
 
-Today, I will introduce the first nonlinear control system that combines a PID controller with gravity compensation. This approach offers a straightforward yet effective framework for managing a triple pendulum, enhancing the simplicity of implementation. By integrating gravity compensation, this system improves upon traditional PID controllers, specifically addressing the nonlinearities induced by gravitational forces and reducing the settling time.
+Today, I will introduce the first nonlinear control system that combines a PID controller with gravity compensation method. This approach offers a straightforward yet effective framework for managing a triple pendulum, enhancing the simplicity of implementation. By integrating gravity compensation method, this system improves upon traditional PID controllers, specifically addressing the nonlinearities induced by gravitational forces and reducing the settling time.
 
 On Day 3, I derived the equations of motion for the triple pendulum:
 
@@ -35,7 +35,7 @@ To compensate for gravity, I extract the $$g$$ matrix from the equation of motio
     {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/01_block_diagram.png" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="caption">
-    Figure 1. Block Diagram of the PID Control System with Gravity Compensation
+    Figure 1. Block Diagram of the PID Control System with Gravity Compensation Method
 </div>
 
 # I. A Pendulum System with a Fixed Base
@@ -79,20 +79,20 @@ In this section, I explore the simulation, focusing on both tracking and regulat
 
 ##### 1) Tracking
 
-Firstly, I set all the gains of the PID controller to zero to test if gravity compensation alone could track the reference input. The results demonstrated that it could neither track the reference input nor stabilize the system. I ran the simulation for up to 10,000 seconds, but the system remained unstable. It resembled an upside-down, slow-moving triple pendulum system, which also exhibited chaotic behavior. The simulation video and the graph for each joint parameter are displayed in Video 1 and Figure 5, respectively.
+Firstly, I set all the gains of the PID controller to zero to test if compensating gravity alone could track the reference input. The results demonstrated that it could neither track the reference input nor stabilize the system. I ran the simulation for up to 10,000 seconds, but the system remained unstable. It resembled an upside-down, slow-moving triple pendulum system, which also exhibited chaotic behavior. The simulation video and the graph for each joint parameter are displayed in Video 1 and Figure 5, respectively.
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/01_fixed_no_PID.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/01_fixed_no_PID.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
-    Video 1. Simulation of Triple Pendulum with Gravity Compensation Only.
+    Video 1. Simulation of Triple Pendulum with Compensating Gravity Only.
 </div>
 
 <div style="width: 80%; margin: 0 auto;">
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/05_fixed_no_PID.png" class="img-fluid rounded z-depth-1" zoomable=true%}
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/05_fixed_no_PID.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 <div class="caption">
@@ -103,7 +103,7 @@ Following the initial simulation, I executed a second simulation using the same 
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/02_fixed_comparison.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/02_fixed_comparison.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -126,9 +126,9 @@ To reduce the torque overshoot, the PID controller's gain can be adjusted by dec
 
 <div style="width: 80%; margin: 0 auto;">
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/07_fixed_PID1+g1.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/08_fixed_PID2+g2.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/09_fixed_PID3+g3.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/07_fixed_PID1+g1.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/08_fixed_PID2+g2.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/09_fixed_PID3+g3.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
 </swiper-container>
 </div>
 <div class="caption">
@@ -141,7 +141,7 @@ Through simulation of the tracking, it was found that compensating for gravity a
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/03_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/03_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -162,7 +162,7 @@ Through simulation of the tracking, it was found that compensating for gravity a
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/04_fixed_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/04_fixed_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -183,7 +183,7 @@ Through simulation of the tracking, it was found that compensating for gravity a
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/03_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/03_fixed_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -225,18 +225,18 @@ Videos 6 through 9 and Figures 14 through 17 demonstrate the tracking capabiliti
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/06_moving_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/06_moving_tracking_1.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/07_moving_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/07_moving_tracking_2.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/08_moving_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/08_moving_tracking_3.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/09_moving_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/09_moving_tracking_4.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -245,10 +245,10 @@ Videos 6 through 9 and Figures 14 through 17 demonstrate the tracking capabiliti
 
 <div style="width: 80%; margin: 0 auto;">
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/14_moving_tracking_1.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/15_moving_tracking_2.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/16_moving_tracking_3.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/17_moving_tracking_4.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/14_moving_tracking_1.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/15_moving_tracking_2.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/16_moving_tracking_3.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/17_moving_tracking_4.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
 </swiper-container>
 </div>
 <div class="caption">
@@ -261,18 +261,18 @@ Videos 10 through 13 and Figures 18 through 21 demonstrate the tracking capabili
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/10_moving_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/10_moving_regulation_1.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/11_moving_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/11_moving_regulation_2.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/12_moving_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/12_moving_regulation_3.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/13_moving_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true  %}
+        {% include video.liquid path="assets/video/posts/2024-05-28-Inverted-Pendulum-Day-4/13_moving_regulation_4.mp4" class="img-fluid rounded z-depth-1" controls=true muted=true %}
     </div>
 </div>
 <div class="caption">
@@ -281,10 +281,10 @@ Videos 10 through 13 and Figures 18 through 21 demonstrate the tracking capabili
 
 <div style="width: 80%; margin: 0 auto;">
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/18_moving_regulation_1.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/19_moving_regulation_2.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/20_moving_regulation_3.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
-  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/21_moving_regulation_4.png" class="img-fluid rounded z-depth-1" zoomable=true%}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/18_moving_regulation_1.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/19_moving_regulation_2.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/20_moving_regulation_3.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Inverted-Pendulum-Day-4/21_moving_regulation_4.png" class="img-fluid rounded z-depth-1" zoomable=true %}</swiper-slide>
 </swiper-container>
 </div>
 <div class="caption">
