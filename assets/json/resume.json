@@ -99,6 +99,14 @@
 
   "projects": [
     {
+      "name": "Simulation and Control of an Inverted Triple Pendulum",
+      "summary": "Developing and simulating various controllers for an inverted triple pendulum using Simulink. Implementing both linear and nonlinear control strategies.",
+      "highlights": ["Control Dynamics", "Simulink"],
+      "url": "/blog/tag/inverted-pendulum/",
+      "startDate": "2024-05",
+      "endDate": "present"
+    },
+    {
       "name": "Robot Arm Optimization",
       "summary": "Performed Finite Element Analysis (FEA) to optimize a roboti arm's design.",
       "highlights": ["Finite Element Analysis - Ansys", "Design Optimization"],
@@ -138,8 +146,17 @@
 
   "volunteer": [
     {
+      "organization": "STEM Saturday",
+      "position": "Volunteer",
+      "url": "/volunteerings/#STEM-Saturday",
+      "startDate": "2024-05-18",
+      "endDate": "2024-05-18",
+      "summary": "Facilitated workshops where students built and tested model cars, applying the concepts of aerodynamics, energy conservation, and potential energy in a practical setting."
+    },
+
+    {
       "organization": "Atlanta Science Festival",
-      "position": "Volunteering Staff",
+      "position": "Volunteer",
       "url": "/volunteerings/#atlanta-science-festival",
       "startDate": "2024-03-08",
       "endDate": "2024-03-08",
