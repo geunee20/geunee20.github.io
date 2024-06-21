@@ -7,7 +7,7 @@ tags: Simulink Control Inverted_Pendulum
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-05-28-Inverted-Pendulum-Day-5/00_thumbnail.gif
+thumbnail: assets/img/posts/2024-06-03-Inverted-Pendulum-Day-5/00_thumbnail.gif
 images:
   compare: true
   slider: true
