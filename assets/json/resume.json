@@ -99,10 +99,10 @@
 
   "projects": [
     {
-      "name": "Simulation and Control of an Inverted Triple Pendulum",
-      "summary": "Developing and simulating various controllers for an inverted triple pendulum using Simulink. Implementing both linear and nonlinear control strategies.",
+      "name": "Simulation and Control of Multi-Link Mechanisms",
+      "summary": "Developing and simulating various controllers for multi-link mechanisms using Simulink. Implementing both linear and nonlinear control strategies.",
       "highlights": ["Control Dynamics", "Simulink"],
-      "url": "/blog/tag/inverted-pendulum/",
+      "url": "/blog/tag/controller-design/",
       "startDate": "2024-05",
       "endDate": "present"
     },

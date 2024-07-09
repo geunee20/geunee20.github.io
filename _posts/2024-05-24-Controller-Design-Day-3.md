@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "[Inverted Pendulum] Day 3 - The Equations of Motion and the Jacobians of the Triple Pendulum"
+title: "[Controller Design] Day 3 - The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
 date: 2024-05-24 00:00:00-0400
-description: Analyzing the equations of motion and Jacobians for a triple pendulum with fixed and moving bases, essential for advanced control designs.
-tags: Simulink Control Inverted_Pendulum
+description: Analyzing the equations of motion and Jacobians for a triple-link mechanism with fixed and moving bases, essential for advanced control designs.
+tags: Simulink Control Controller_Design
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-05-24-Inverted-Pendulum-Day-3/00_thumbnail.png
+thumbnail: assets/img/posts/2024-05-24-Controller-Design-Day-3/00_thumbnail.png
 ---
 
-In our previous work, I implemented a PID controller that relied solely on the difference between the reference angle and the current angle. Due to its simplistic mechanism, an in-depth understanding of the triple pendulum's behavior was not required. However, given the inherent nonlinearity of the triple pendulum, the PID controller proved somewhat inefficient and performed less effectively compared to other controllers.
+In our previous work, I implemented a PID controller that relied solely on the difference between the reference angle and the current angle. Due to its simplistic mechanism, an in-depth understanding of the triple-link mechanism's behavior was not required. However, given the inherent nonlinearity of the triple-link mechanism, the PID controller proved somewhat inefficient and performed less effectively compared to other controllers.
 
-Subsequent controllers necessitate a thorough analysis of the triple pendulum's behavior. Therefore, I will explore the equations of motion and the Jacobians of the triple pendulum in detail.
+Subsequent controllers necessitate a thorough analysis of the triple-link mechanism's behavior. Therefore, I will explore the equations of motion and the Jacobians of the triple-link mechanism in detail.
 
 # I. Background
 
@@ -37,7 +37,7 @@ $$
 In this equation, $$Q$$ is a vector that includes each of the generalized forces associated with the chosen generalized coordinates (e.g.,
 $$ f_x, \tau_1 $$).
 
-Let the following is the equation of motion of a double pendulum.
+Let the following is the equation of motion of a double-link mechanism.
 
 $$
 \begin{bmatrix}\tau_1 \\ \tau_2 \end{bmatrix} = \begin{bmatrix} M_{1, 1} & M_{1, 2} \\ M_{2, 1} & M_{2, 2} \end{bmatrix}\begin{bmatrix}\ddot{\theta}_1 \\ \ddot{\theta}_2 \end{bmatrix} + \begin{bmatrix} h_{1, 1}\dot{\theta}_2^2 + h_{1, 2}\dot{\theta}_1\dot{\theta}_2 \\ h_{2, 1}\dot{\theta}_1^2 \end{bmatrix} + \begin{bmatrix} g_{1} \\ g_{2}\end{bmatrix}g
@@ -87,17 +87,17 @@ In our scenario, the Jacobian matrix captures the relationship between each join
 
 # II. Our Scenario
 
-### A. A Triple Pendulum with a Fixed Base
+### A. A Triple-Link Mechanism with a Fixed Base
 
-The free body diagram of the triple pendulum with a fixed base is illustrated in Figure 1. In this diagram, the positive z-axis of the global frame is initially considered as the reference position. For simplification purposes, I have designated the x-axis of the global frame as the new reference position, leading to the relationship $$\theta_1 = \frac{\pi}{2} + q_1$$. The variables $$q_2$$ and $$q_3$$ are retained as $$\theta_2$$ and $$\theta_3$$, respectively.
+The free body diagram of the triple-link mechanism with a fixed base is illustrated in Figure 1. In this diagram, the positive z-axis of the global frame is initially considered as the reference position. For simplification purposes, I have designated the x-axis of the global frame as the new reference position, leading to the relationship $$\theta_1 = \frac{\pi}{2} + q_1$$. The variables $$q_2$$ and $$q_3$$ are retained as $$\theta_2$$ and $$\theta_3$$, respectively.
 
 <div style="width: 60%; margin: 0 auto;">
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-24-Inverted-Pendulum-Day-3/01_fixed.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-24-Controller-Design-Day-3/01_fixed.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 <div class="caption">
-    Figure 1. Free Body Diagram of the Triple Pendulum with Fixed Base
+    Figure 1. Free Body Diagram of the Triple-Link Mechanism with Fixed Base
 </div>
 
 - $$\theta_i$$: the joint angle of joint $$i$$
@@ -204,19 +204,19 @@ where:
 - The derivatives $$\frac{\partial x_{g, 3}}{\partial \theta_i}$$ and $$\frac{\partial y_{g, 3}}{\partial \theta_i}$$ involve sine and cosine functions reflecting changes in position with respect to changes in the angles $$ \theta_1 $$, $$ \theta_2 $$, and $$ \theta_3 $$.
 - The third row reflects the direct additive impact of each joint angle on the overall orientation $$ \Omega $$.
 
-For the complete calculations and results, please refer to the 'Day_03_Fixed_Base.m' file available on [GitHub repository](https://github.com/geunee20/Inverted_Pendulum).
+For the complete calculations and results, please refer to the 'Day_03_Fixed_Base.m' file available on [GitHub repository](https://github.com/geunee20/Controller_Design).
 
-### B. A Triple Pendulum with a Moving Base
+### B. A Triple-Link Mechanism with a Moving Base
 
-The free body diagram of the triple pendulum with a moving base is illustrated in Figure 2. It is similar to the fixed base but I added another parameter ($$x$$).
+The free body diagram of the triple-link mechanism with a moving base is illustrated in Figure 2. It is similar to the fixed base but I added another parameter ($$x$$).
 
 <div style="width: 60%; margin: 0 auto;">
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-24-Inverted-Pendulum-Day-3/02_moving.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-24-Controller-Design-Day-3/02_moving.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 <div class="caption">
-    Figure 2. Free Body Diagram of the Triple Pendulum with Moving Base
+    Figure 2. Free Body Diagram of the Triple-Link Mechanism with Moving Base
 </div>
 
 Since $$ x $$ influences the x-component of each center of mass, I must update them accordingly.
@@ -271,14 +271,14 @@ J = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-For the complete calculations and results, please refer to the 'Day_03_Moving_Base.m' file available on [GitHub repository](https://github.com/geunee20/Inverted_Pendulum).
+For the complete calculations and results, please refer to the 'Day_03_Moving_Base.m' file available on [GitHub repository](https://github.com/geunee20/Controller_Design).
 
 # III. Moving Forward
 
-Today, I derived the equations of motion for a triple pendulum with both fixed and moving bases. These results will be instrumental in developing advanced control mechanisms such as gravity compensation control, Jacobian transpose control, and controllers for underactuated systems. Please stay tuned for more updates!
+Today, I derived the equations of motion for a triple-link mechanism with both fixed and moving bases. These results will be instrumental in developing advanced control mechanisms such as gravity compensation control, Jacobian transpose control, and controllers for underactuated systems. Please stay tuned for more updates!
 
 <br>
 <br>
 <br>
 
-##### You can find the Simulink model on my [GitHub repository](https://github.com/geunee20/Inverted_Pendulum).
+##### You can find the Simulink model on my [GitHub repository](https://github.com/geunee20/Controller_Design).
