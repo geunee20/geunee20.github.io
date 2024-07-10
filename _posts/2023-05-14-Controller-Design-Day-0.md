@@ -21,30 +21,40 @@ The inaugural step of this journey begins with constructing the multibody system
 
 #### Phase 1: Building the Foundation
 
-The first phase involves building a multibody system for the multi-link mechanism. This foundational step includes designing multi-link mechanisms with different numbers of links and setting up the initial simulation environment. By understanding the basic dynamics and how the system responds under various initial conditions, we can prepare for more complex control implementations.
+The first phase involves building a multibody system for the multi-link mechanism. This foundational step includes designing multi-link mechanisms with different numbers of links and setting up the initial simulation environment. By understanding the basic dynamics and how the system responds under various initial conditions, I can prepare for more complex control implementations.
 
-#### Phase 2: Achieving Stability with PID Control
+#### Phase 2: Achieving Stability with PID and LQR Control
 
-Once the basic system is up and running, the focus shifts to implementing a PID controller for a multi-link mechanism with a fixed base. The application of the PID controller to the first joint (Joint 1) of the multi-link mechanism is a critical step towards achieving stable, controlled motion. Fine-tuning the PID parameters to maintain the multi-link mechanism in an upright position, despite potential disturbances, will be a test of precision and patience. This phase is pivotal as it lays the foundation for more dynamic challenges ahead.
+Once the basic system is operational, I focus on stabilizing a multi-link mechanism. Initially, a PID controller is applied to the joints to achieve stable, controlled motion. Tuning the PID parameters is crucial for maintaining the mechanism's upright position despite disturbances. I also integrate a Linear Quadratic Regulator (LQR) to complement the PID controller. LQR optimally minimizes a cost function that balances state deviation and control effort, enhancing stability and robustness under linear conditions. The combination of PID and LQR establishes a robust control foundation, efficiently managing disturbances and laying the groundwork for more dynamic challenges in subsequent phases.
 
-#### Phase 3: Dynamic Adaptation with a Moving Base
+#### Phase 3: Calculating the Equations of Motion for Non-linear Controller Design
 
-Building on the stability achieved, I will then transition to experimenting with a moving base for the multi-link mechanism, which introduces a new layer of complexity. The previously static base now becomes dynamic, adding unpredictable elements to the control scenario. The challenge here is to adapt the PID controller to effectively manage these new dynamics, focusing on controlling the entire system holistically without direct actuation at Joint 1. This stage promises to be a rich ground for learning and innovation.
+Building on the foundational understanding and adaptations to a dynamic base, this phase focuses on calculating the equations of motion for the multi-link mechanism. I will use Lagrangian mechanics to derive precise mathematical models that describe the system’s dynamics, essential for predicting its behavior under various conditions. These equations will directly inform the design of advanced nonlinear controllers, enabling optimized control strategies and improved system performance in subsequent phases.
 
-#### Phase 4: Advanced Control with LQR
+#### Phase 4: Advanced Nonlinear Control Strategies
 
-In this penultimate phase of our project, we delve into the application of the Linear Quadratic Regulator (LQR) to control the moving base multi-link mechanism. The LQR method, a cornerstone in control theory, is celebrated for its ability to provide optimal control by minimizing a cost function that balances state errors and control effort. This powerful technique offers a robust solution for managing complex dynamic systems, making it an ideal candidate for our multi-link mechanism control challenge.
+In the final phases of our project, I integrate several advanced nonlinear control strategies to handle our moving base multi-link mechanism, particularly focusing on robust and intelligent methodologies.
 
-#### Phase 5: Advanced Control with Reinforcement Learning
+- **PID with Gravity Compensation:** Enhances basic PID control by incorporating compensation for gravitational forces acting on the system, crucial for maintaining stability and control in vertically oriented mechanisms.
+- **PID with Computed Torque Method:** Combines conventional PID control with a model-based torque computation that accounts for the dynamics of the system, significantly improving precision and response to disturbances.
+- **Bang-Bang Controller:** Offers a simple yet effective control strategy for rapid switching between maximum states, useful for systems requiring stark transitions.
+- **Fuzzy Logic Controller:** Introduces an ability to handle uncertainties and imprecise inputs, making decisions based on 'degrees of truth' rather than binary logic, ideal for complex, nonlinear system behaviors.
+- **Gain Scheduling Controller:** Adjusts controller gains based on real-time changes in system parameters or operating conditions, enhancing control flexibility and responsiveness.
+- **Self-Tuning Controller:** Adapts its parameters in real-time based on system feedback, ensuring optimal performance under varying conditions.
+- **Model-Reference Adaptive Control (MRAC):** Aims to modify the system dynamics to follow a desired reference model, useful for ensuring stability in dynamically changing environments.
+- **Model Predictive Control (MPC):** Utilizes a model of the system to predict future states and optimize control actions over a set horizon, providing a strategic depth to immediate and future control needs.
+- **Sliding Mode Control (SMC):** Features a discontinuous control law ensuring robustness against model uncertainties and external disturbances, ideal for systems where precise control is crucial despite parameter variations.
+- **Backstepping Controller:** Utilizes a recursive design approach that builds a Lyapunov function step-by-step, making it suitable for systems with strict stability requirements.
+- **Neural Network Controller:** Employs artificial neural networks to model complex nonlinearities and dynamic behaviors, enabling adaptive control strategies tailored to specific operational profiles.
 
-The final frontier of this project will be the implementation of a reinforcement learning-based controller. This advanced phase will handle a moving base multi-link mechanism, still without any direct actuation at Joint 1. The objective is to enable the system to autonomously learn optimal control policies through continuous trial and error. This approach is expected to refine the system’s adaptability and optimize performance, pushing the boundaries of what can be achieved with intelligent control systems.
+These control strategies collectively aim to address the multi-faceted challenges presented by the multi-link mechanism, ensuring robustness, adaptability, and high performance in real-world operational scenarios.
 
 <br>
 <br>
 
 Each phase of this project is designed to not only build on the previous experiences but also to introduce and overcome new complexities. This systematic escalation ensures a thorough exploration and understanding of each control strategy implemented.
 
-I invite you to stay tuned as I document this exciting journey, sharing detailed insights and results from each phase of my exploration into the dynamic realm of multi-link mechanisms. This blog will serve as a chronicle of my learning, challenges, breakthroughs, and, ultimately, the evolution of my understanding of control dynamics. Join me on this adventure as we push the limits of technology and engineering!
+I invite you to stay tuned as I document this exciting journey, sharing detailed insights and results from each phase of my exploration into the dynamic realm of multi-link mechanisms. This blog will serve as a chronicle of my learning, challenges, breakthroughs, and, ultimately, the evolution of my understanding of control dynamics. Join me on this adventure as I push the limits of technology and engineering!
 
 <br>
 <br>
