@@ -13,7 +13,7 @@ images:
   slider: true
 ---
 
-# 1. Introduction
+# I. Introduction
 
 On Day 4, I realized that while a PID controller with gravity compensation stabilizes the system faster, it often struggles with overreactions and potential destabilizations. This occurs because it focuses solely on angular positions, neglecting angular velocities.
 

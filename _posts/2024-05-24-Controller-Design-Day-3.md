@@ -273,6 +273,57 @@ $$
 
 For the complete calculations and results, please refer to the 'Day_03_Moving_Base.m' file available on [GitHub repository](https://github.com/geunee20/Controller_Design).
 
+### C. A Pendulum on Cart
+
+For a simplified model derived from the triple-link mechanism on a moving base, consider only the base and the first link.
+
+- **Base coordinates**:
+  $$
+  s_0 = \begin{bmatrix}
+  x \\
+  0
+  \end{bmatrix}
+  $$
+- **Link 1 coordinates**:
+  $$
+  s_1 = \begin{bmatrix}
+  x + \frac{1}{2} l_1 \cos(\theta_1) \\
+  \frac{1}{2} l_1 \sin(\theta_1)
+  \end{bmatrix}
+  $$
+
+##### 1) Equations of Motion:
+
+The equations of motion for the system, including both inertial and gravitational effects, can be represented in matrix form as follows:
+
+$$
+\begin{bmatrix}
+m_0 + m_1 & -\frac{m_1 l_1 \sin(\theta_1)}{2} \\
+-\frac{l_1 m_1 \sin(\theta_1)}{2} & \frac{l_1^2 m_1}{3}
+\end{bmatrix}
+\begin{bmatrix}
+\ddot{x} \\
+\ddot{\theta}_1
+\end{bmatrix}
+
++ \begin{bmatrix}
+  -\frac{1}{2}m_1 l_1 \cos(\theta_1) \dot{\theta}_1^2 \\
+  0
+  \end{bmatrix}
+
++ \begin{bmatrix}
+  0 \\
+  \frac{1}{2}g l_1 m_1 \cos(\theta_1)
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  F \\
+  0
+  \end{bmatrix}
+$$
+
+These equations of motion may appear unconventional because the angle reference $$ \theta_1 $$ is defined from the horizontal (positive x-axis), rather than the more typical vertical reference. This orientation alters the trigonometric components and their interactions within the dynamic model, influencing how terms involving $$ \sin(\theta_1) $$ and $$ \cos(\theta_1) $$ are applied in the system's matrix representation.
+
 # III. Moving Forward
 
 Today, I derived the equations of motion for a triple-link mechanism with both fixed and moving bases. These results will be instrumental in developing advanced control mechanisms such as gravity compensation control, Jacobian transpose control, and controllers for underactuated systems. Please stay tuned for more updates!
