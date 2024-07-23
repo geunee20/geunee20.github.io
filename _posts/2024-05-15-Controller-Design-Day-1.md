@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Controller Design] Day 1 - Creating the Multibody System Using Simscape"
+title: "[Controller Design] Day 1: Creating the Multibody System Using Simscape"
 date: 2024-05-15 00:00:00-0000
 description: Exploring the dynamics of a multi-link mechanism by constructing and simulating a multibody system using Simscape.
-tags: Simulink Control Controller_Design
+tags: Simulink Simscape Controller_Design
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true

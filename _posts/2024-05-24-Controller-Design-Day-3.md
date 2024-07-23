@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Controller Design] Day 3 - The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
+title: "[Controller Design] Day 3: The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
 date: 2024-05-24 00:00:00-0400
 description: Analyzing the equations of motion and Jacobians for a triple-link mechanism with fixed and moving bases, essential for advanced control designs.
-tags: Simulink Control Controller_Design
+tags: Simulink Equation_of_Motion Controller_Design
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true

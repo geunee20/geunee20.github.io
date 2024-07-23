@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Controller Design] Day 2 - Fully Actuated Multi-Link Mechanism / PID Controller"
+title: "[Controller Design] Day 2: PID Controller"
 date: 2024-05-20 00:00:00-0400
 description: An in-depth exploration of a fully actuated triple-link mechanism using a PID controller, with its tracking accuracy, and regulation effectiveness.
-tags: Simulink Control Controller_Design
+tags: Simulink PID Controller_Design
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true

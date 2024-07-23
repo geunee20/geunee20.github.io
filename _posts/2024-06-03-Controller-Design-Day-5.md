@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[Controller Design] Day 5 - Fully Actuated Multi-Link Mechanism / PID Control with Computed Torque Method"
+title: "[Controller Design] Day 5: PID Control with Computed Torque Method"
 date: 2024-06-03 00:00:00-0400
 description: Refining multi-link mechanism control using PID techniques combined with the computed torque method for improved precision and dynamic stability.
-tags: Simulink Control Controller_Design
+tags: Simulink Computed_Torque Controller_Design
 categories: Study_with_Me
 disqus_comments: true
 related_posts: true
