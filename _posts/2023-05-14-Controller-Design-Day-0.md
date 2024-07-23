@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Controller Design] Day 0 - Kicking Off the Controller Design Project"
+title: "[Controller Design] Day 0: Kicking Off the Controller Design Project"
 date: 2024-05-14 11:31:00-0400
 description: An overview of project exploring controller design techniques.
 tags: Simulink Control Controller_Design
