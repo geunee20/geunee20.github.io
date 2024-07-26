@@ -49,7 +49,7 @@ In the updated design of the link subsystems, illustrated in Figures 2, 3, and 4
 - In a shift from the initial configuration, I've realigned the x-axis of link 1 to coincide with the z-axis of the world frame.
 - Additionally, I've incorporated blocks to generate an impulsive external force at the end of link 3, to simulate external forces on the system and test its regulatory response.
 
-The modifications ensure that when the multi-link mechanism is upright, its angular displacement is set to $$ 0 $$. This allows us to use the origin as our equilibrium point in subsequent simulations.
+The modifications ensure that when the multi-link mechanism is upright, its angular displacement is set to $$ 0 $$. This allows me to use the origin as my equilibrium point in subsequent simulations.
 
 <div class="col-sm mt-3 mt-md-0">
     <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
@@ -254,7 +254,7 @@ Specifically, Videos 13 to 15 demonstrate conditions with low base density under
 
 # III. Moving Forward
 
-Today, I dealt with a fully actuated multi-link mechanism using a PID controller. This control system offers the benefit of a relatively simple design, as it does not require consideration of the complete dynamic equations of the triple-link mechanism. However, this simplicity sometimes leads to drawbacks, such as overreaction or subsequent destabilization of the system. In my next post, I will explore alternative control systems that can address these issues. Stay tuned for more updates as we delve deeper into the intriguing world of multi-link mechanisms and confront the challenges of controlling chaotic systems!
+Today, I dealt with a fully actuated multi-link mechanism using a PID controller. This control system offers the benefit of a relatively simple design, as it does not require consideration of the complete dynamic equations of the triple-link mechanism. However, this simplicity sometimes leads to drawbacks, such as overreaction or subsequent destabilization of the system. In my next post, I will explore alternative control systems that can address these issues. Stay tuned for more updates as I delve deeper into the intriguing world of multi-link mechanisms and confront the challenges of controlling chaotic systems!
 
 <br>
 <br>

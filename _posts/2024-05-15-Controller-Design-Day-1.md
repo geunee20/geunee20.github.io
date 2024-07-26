@@ -143,7 +143,7 @@ For the multi-link mechanism with a moving frame, I kept the links unchanged but
 
 ### B. Subsystem - Moving Base
 
-Figure 9 shows the moving base subsystem. Similar to the revolute joint, the translational axis of prismatic joints is the z-axis. Therefore, we need to rotate the joint's frame to align the joint's z-axis with the world frame's x-axis.
+Figure 9 shows the moving base subsystem. Similar to the revolute joint, the translational axis of prismatic joints is the z-axis. Therefore, I need to rotate the joint's frame to align the joint's z-axis with the world frame's x-axis.
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-15-Controller-Design-Day-1/09_sub_system_base.png" class="img-fluid rounded z-depth-1" %}

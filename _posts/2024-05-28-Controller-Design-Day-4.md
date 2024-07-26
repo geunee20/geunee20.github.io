@@ -13,9 +13,13 @@ images:
   slider: true
 ---
 
-A PID control system is valued for its straightforward design, as it does not necessitate a detailed understanding of the dynamic equations governing a triple-link mechanism. However, this simplicity can also be a drawback. The system may overreact or destabilize because it does not account for complex dynamics. Additionally, PID controllers often struggle with balancing between faster response and overshoot, and designing an effective system can be challenging due to its inherent limitations in handling nonlinear behaviors.
+This post builds upon the lecture by [Dr. Jun Ueda](https://www.me.gatech.edu/faculty/ueda), exploring an enhanced control system for multi-link mechanisms.
 
-Today, I will introduce the first nonlinear control system that combines a PID controller with gravity compensation method. This approach offers a straightforward yet effective framework for managing a triple-link mechanism, enhancing the simplicity of implementation. By integrating gravity compensation method, this system improves upon traditional PID controllers, specifically addressing the nonlinearities induced by gravitational forces and reducing the settling time.
+# I. Introduction
+
+PID (Proportional-Integral-Derivative) control systems are widely appreciated for their straightforward design, as they don't require an in-depth understanding of the complex dynamic equations governing triple-link mechanisms. However, this simplicity can be a double-edged sword. The system may exhibit instability or overreaction due to its inability to account for intricate dynamics. Moreover, PID controllers often struggle to balance rapid response with minimal overshoot, and their inherent limitations in handling nonlinear behaviors can make designing an effective system challenging.
+
+In this post, I introduce a novel nonlinear control system that combines a PID controller with a gravity compensation method. This approach offers a robust yet accessible framework for managing triple-link mechanisms, enhancing both performance and ease of implementation. By integrating gravity compensation, this system improves upon traditional PID controllers by specifically addressing the nonlinearities induced by gravitational forces, thereby reducing settling time and improving overall stability.
 
 On Day 3, I derived the equations of motion for the triple-link mechanism:
 
@@ -25,11 +29,11 @@ $$
 
 Where:
 
-- **Matrix M (Inertial Term)**: Represents the Newtonian response of the system to applied forces, accounting for the inertia of the masses.
-- **Matrix h (Coriolis and Centrifugal Forces)**: Quantifies the Coriolis and centrifugal forces, dependent on system velocities and rotational dynamics.
-- **Matrix g (Gravitational Term)**: Accounts for the force due to gravity acting on each mass component.
+- **M(q) (Inertial Matrix)**: Represents the system's inertial properties, describing how the mechanism resists acceleration in response to applied torques.
+- **h(q, ̇q) (Coriolis and Centrifugal Terms)**: Accounts for the Coriolis and centrifugal forces, which depend on the system's velocities and rotational dynamics.
+- **g(q) (Gravitational Term)**: Describes the torques induced by gravitational forces acting on each component of the mechanism.
 
-To compensate for gravity, I extract the $$g$$ matrix from the equation of motion and add it to the feedback from the PID controller. The block diagram of this system is shown in Figure 1.
+The gravity compensation method involves extracting the $$g(q)$$ term from the equation of motion and incorporating it into the feedback loop of the PID controller. This approach allows the control system to proactively counteract gravitational effects, leading to more precise and efficient control. Figure 1 illustrates the block diagram of this enhanced control system.
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/posts/2024-05-28-Controller-Design-Day-4/01_block_diagram.png" class="img-fluid rounded z-depth-1" %}
@@ -38,7 +42,9 @@ To compensate for gravity, I extract the $$g$$ matrix from the equation of motio
     Figure 1. Block Diagram of the PID Control System with Gravity Compensation Method
 </div>
 
-# I. A Multi-Link Mechanism with a Fixed Base
+In the following sections, I will delve deeper into the implementation and advantages of this combined PID and gravity compensation approach, demonstrating its effectiveness in controlling triple-link mechanisms.
+
+# II. A Multi-Link Mechanism with a Fixed Base
 
 ### A. Overall System
 
@@ -202,7 +208,7 @@ Through simulation of the tracking, it was found that compensating for gravity a
 
 Even though gravity compensation could not resolve the overreaction issue, it was observed that systems with gravity compensation recovered more quickly than those without. This quicker recovery was achieved by maintaining a faster angular speed when the angular displacement was small. Through simulation, it was determined that gravity compensation is more effective when there is a small angular displacement. Consequently, under conditions of small angular displacement, using a PID controller with gravity compensation can efficiently manage the system, optimizing performance and stability.
 
-# II. A Multi-Link Mechanism with a Moving Base
+# III. A Multi-Link Mechanism with a Moving Base
 
 ### A. Overall System
 
@@ -291,11 +297,11 @@ Videos 10 through 13 and Figures 18 through 21 demonstrate the tracking capabili
     Figures 18 - 21. Analysis of Angular Displacement in the Triple-Link Mechanism with Moving Base Across Various Disturbances.
 </div>
 
-# III. Moving Forward
+# IV. Moving Forward
 
 Today, I managed a fully actuated multi-link mechanism using a PID controller complemented by gravity compensation. The simulations revealed that gravity compensation significantly enhances stabilization by maintaining a high angular velocity when the angular displacement is minimal. Upon examining the torque feedback, I observed that gravity compensation acts as a counterbalance to the feedback from the PID, effectively reducing torque overshoot. Therefore, in scenarios involving only slight angular displacements, incorporating gravity compensation can markedly improve system performance.
 
-During today's simulations, I realized that simulating the fixed base system might be time-consuming. Hence, starting from Day 5, I will omit simulations of the fixed base system. Stay tuned for more updates as we continue exploring the fascinating realm of multi-link mechanisms and tackle the challenges associated with controlling chaotic systems!
+During today's simulations, I realized that simulating the fixed base system might be time-consuming. Hence, starting from Day 5, I will omit simulations of the fixed base system. Stay tuned for more updates as I continue exploring the fascinating realm of multi-link mechanisms and tackle the challenges associated with controlling chaotic systems!
 
 <br>
 <br>

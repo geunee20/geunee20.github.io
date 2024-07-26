@@ -19,7 +19,7 @@ Given these challenges, and with the goal of this post to introduce and explore 
 
 # I. Introduction
 
-State Feedback Control is a fundamental technique in modern control theory that forms the basis for many advanced control strategies, including the Linear Quadratic Regulator (LQR). This approach allows us to precisely manipulate the behavior of a system by feeding back information about its current state. In this post, I'll explore the principles, mathematics, and applications of State Feedback Control.
+State Feedback Control is a fundamental technique in modern control theory that forms the basis for many advanced control strategies, including the Linear Quadratic Regulator (LQR). This approach allows me to precisely manipulate the behavior of a system by feeding back information about its current state. In this post, I'll explore the principles, mathematics, and applications of State Feedback Control.
 
 ## A. State Feedback Control
 
@@ -277,14 +277,14 @@ $$
 
 When designing the feedback gain matrix $$K$$ for state feedback control using the pole placement method, two key aspects need to be considered:
 
-1. The pole placement method itself, which allows us to achieve desired closed-loop dynamics.
+1. The pole placement method itself, which allows me to achieve desired closed-loop dynamics.
 2. The controllability of the system, which is a prerequisite for successful pole placement.
 
 Let's explore each of these in detail:
 
 ##### a) Pole Placement Method
 
-The pole placement method is a powerful technique for designing the feedback gain matrix $$K$$ in state feedback control. This method allows us to directly specify the desired eigenvalues of the closed-loop system, which in turn determines its dynamic response characteristics.
+The pole placement method is a powerful technique for designing the feedback gain matrix $$K$$ in state feedback control. This method allows me to directly specify the desired eigenvalues of the closed-loop system, which in turn determines its dynamic response characteristics.
 
 Here's how it works:
 
@@ -310,7 +310,7 @@ $$ \alpha(s) = s^2 + 4s + 8 \tag{11} $$
 
 I would then solve for $$K$$ to make $$det(sI - (A - BK))$$ equal to this polynomial.
 
-The pole placement method gives us direct control over the system's eigenvalues, allowing us to shape its response precisely. However, it requires that the system be completely state controllable.
+The pole placement method gives me direct control over the system's eigenvalues, allowing me to shape its response precisely. However, it requires that the system be completely state controllable.
 
 ##### b) Controllability
 
@@ -709,7 +709,7 @@ Based on these findings, my next steps will focus on implementing more advanced 
 1. **LQR Controller for Stabilization**:
    I will implement a Linear Quadratic Regulator (LQR) controller, which can be seen as an upgraded version of the pole placement method. LQR offers several advantages:
    - It provides a systematic way to find the optimal feedback gain matrix.
-   - It allows us to balance the trade-off between control effort and state regulation through the Q and R matrices.
+   - It allows me to balance the trade-off between control effort and state regulation through the Q and R matrices.
    - It often results in more robust control compared to simple pole placement.
 
    By implementing LQR, I aim to achieve better stabilization performance, especially for larger initial angles around the upright position.
@@ -728,7 +728,7 @@ These advancements should address several of the limitations I observed:
 
 - The sensitivity to pole placement that I encountered should be mitigated by the LQR's systematic approach to gain selection.
 - The challenges in transitioning from swing-up to stabilization control should be reduced with the more sophisticated Energy Shaping method.
-- The overall robustness of the system should improve, potentially allowing us to handle larger disturbances and a wider range of initial conditions.
+- The overall robustness of the system should improve, potentially allowing me to handle larger disturbances and a wider range of initial conditions.
 
 In my next update, I'll dive into the theory behind LQR and Energy Shaping control, implement these methods for my inverted pendulum system, and compare their performance against my current pole placement and Bang-Bang control strategies. I're excited to see how these advanced techniques will improve my inverted pendulum's behavior across various scenarios!
 

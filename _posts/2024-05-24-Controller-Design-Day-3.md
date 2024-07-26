@@ -10,11 +10,11 @@ related_posts: true
 thumbnail: assets/img/posts/2024-05-24-Controller-Design-Day-3/00_thumbnail.png
 ---
 
-In our previous work, I implemented a PID controller that relied solely on the difference between the reference angle and the current angle. Due to its simplistic mechanism, an in-depth understanding of the triple-link mechanism's behavior was not required. However, given the inherent nonlinearity of the triple-link mechanism, the PID controller proved somewhat inefficient and performed less effectively compared to other controllers.
+In my previous work, I implemented a PID controller that relied solely on the difference between the reference angle and the current angle. Due to its simplistic mechanism, an in-depth understanding of the triple-link mechanism's behavior was not required. However, given the inherent nonlinearity of the triple-link mechanism, the PID controller proved somewhat inefficient and performed less effectively compared to other controllers.
 
 Subsequent controllers necessitate a thorough analysis of the triple-link mechanism's behavior. Therefore, I will explore the equations of motion and the Jacobians of the triple-link mechanism in detail.
 
-# I. Background
+# I. Introduction
 
 ### A. Lagrangian Dynamics
 
@@ -83,9 +83,9 @@ $$
 \end{bmatrix} \tag{3}
 $$
 
-In our scenario, the Jacobian matrix captures the relationship between each joint parameter and the position and orientation of link3's center of mass, since our system does not include a typical end-effector.
+In my scenario, the Jacobian matrix captures the relationship between each joint parameter and the position and orientation of link3's center of mass, since my system does not include a typical end-effector.
 
-# II. Our Scenario
+# II. My Scenario
 
 ### A. A Triple-Link Mechanism with a Fixed Base
 
@@ -108,7 +108,7 @@ The free body diagram of the triple-link mechanism with a fixed base is illustra
 - $$S_{ijk}$$: $$\sin(\theta_i + \theta_j + \theta_k)$$
 - $$C_{ijk}$$: $$\cos(\theta_i + \theta_j + \theta_k)$$
 
-The moment of inertia for each link in our system can be calculated using the formula:
+The moment of inertia for each link in my system can be calculated using the formula:
 
 $$
 I = \frac{1}{12}m(l^2 + w^2) \approx \frac{1}{12}ml^2
@@ -260,7 +260,7 @@ $$
 
 ##### 2) Jacobian
 
-The function $$ f $$ f remains unchanged, but we must update the Jacobian matrix
+The function $$ f $$ f remains unchanged, but I must update the Jacobian matrix
 $$ J $$ as follows:
 
 $$

@@ -13,6 +13,8 @@ images:
   slider: true
 ---
 
+This post builds upon the lecture by [Dr. Jun Ueda](https://www.me.gatech.edu/faculty/ueda), exploring an enhanced control system for multi-link mechanisms.
+
 # I. Introduction
 
 On Day 4, I realized that while a PID controller with gravity compensation stabilizes the system faster, it often struggles with overreactions and potential destabilizations. This occurs because it focuses solely on angular positions, neglecting angular velocities.
@@ -25,9 +27,9 @@ $$
 
 Where:
 
-- **Matrix M (Inertial Term)**: Reflects the Newtonian response to applied forces, considering the inertia of the masses.
-- **Matrix h (Coriolis and Centrifugal Forces)**: Accounts for forces due to system velocities and rotational dynamics.
-- **Matrix g (Gravitational Term)**: Represents the gravitational forces acting on each segment.
+- **M(q) (Inertial Matrix)**: Represents the system's inertial properties, describing how the mechanism resists acceleration in response to applied torques.
+- **h(q, ̇q) (Coriolis and Centrifugal Terms)**: Accounts for the Coriolis and centrifugal forces, which depend on the system's velocities and rotational dynamics.
+- **g(q) (Gravitational Term)**: Describes the torques induced by gravitational forces acting on each component of the mechanism.
 
 Today, I introduce a nonlinear control system that combines a PID controller with the computed torque method. This system tackles the nonlinear dynamics effectively, compensating for gravity and dynamic forces while integrating displacement and velocity feedback. This approach, known as feedback linearization, linearizes the control by canceling out nonlinearities, enhancing system stability and tracking accuracy.
 
@@ -399,7 +401,7 @@ However, as demonstrated in Video 11 and Figure 18, if the force is sufficiently
 
 ###### 4) $$ \rho_0 = 2700kg/m^3, F = 1N, K_p = 10, K_i = 300, K_d = 20 (Unstable System) $$
 
-Similar to the tracking simulation, I also simulated the regulation of an unstable system, defined by the condition $$ K_dK_p < K_i $$. In this configuration, even a minor perturbation can cause the system to diverge rapidly. This sensitivity to disturbances highlights the challenges of controlling such a system. In our Video 12 and Figure 20, you can observe how these tiny perturbations escalated, leading to increasingly significant deviations from the stable state.
+Similar to the tracking simulation, I also simulated the regulation of an unstable system, defined by the condition $$ K_dK_p < K_i $$. In this configuration, even a minor perturbation can cause the system to diverge rapidly. This sensitivity to disturbances highlights the challenges of controlling such a system. In my Video 12 and Figure 20, you can observe how these tiny perturbations escalated, leading to increasingly significant deviations from the stable state.
 
 <div style="width: 80%; margin: 0 auto; display: flex; justify-content: center;">
     <div>
@@ -426,7 +428,7 @@ Today, I enhanced the control of a fully actuated multi-link mechanism using a P
 
 During the simulation, I observed two key findings: First, while the gains of the PID controller can be increased significantly, this does not necessarily translate to improved performance. Second, although the computed torque method markedly enhances system performance, it does not address inherent PID limitations such as the potential for overreaction. This suggests that while the PID controller remains a component, some of its fundamental drawbacks persist.
 
-Through Days 4 and 5, I studied and implemented the feedback linearization method for nonlinear systems. Now, equipped with this understanding, I am eager to explore a variety of other nonlinear control strategies. Stay tuned for more updates as we continue to explore the fascinating world of multi-link mechanisms and tackle the challenges associated with controlling chaotic systems!
+Through Days 4 and 5, I studied and implemented the feedback linearization method for nonlinear systems. Now, equipped with this understanding, I am eager to explore a variety of other nonlinear control strategies. Stay tuned for more updates as I continue to explore the fascinating world of multi-link mechanisms and tackle the challenges associated with controlling chaotic systems!
 
 <br>
 <br>
