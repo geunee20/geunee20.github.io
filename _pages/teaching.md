@@ -21,7 +21,7 @@ nav_order: 3
     Topics: Modeling and simulation, Feedback control analysis, Feedback control design
   </li>
   <li>
-    I received a 4.54 out of 5 in TA evaluations, with all students recommending me for future courses.
+    I received a 4.9 out of 5 in TA evaluations, with all students recommending me for future courses.
   </li>
   <li>
     Review Sessions

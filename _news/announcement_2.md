@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Volunteered at the Atlanta Science Festival!
+Volunteered at the [Atlanta Science Festival](/volunteerings/#atlanta-science-festival)!

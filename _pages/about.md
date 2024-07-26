@@ -9,8 +9,7 @@ profile:
   image: about_main.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Master's student</p>
-    <p>Mechanical Engineering</p>
+    <p>Research Associate</p>
     <p>Georgia Institute of Technology</p>
 
 news: true # includes a list of news items
