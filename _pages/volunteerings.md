@@ -36,9 +36,33 @@ images_maple:
     alt: "Something went wrong"
 ---
 
-### Atlanta Science Festival
+<a id="SSOS"></a>
+
+### Summer Science Outreach Series at [Atlanta Children's Shelter](https://acsatl.org/)
+
+_July 2024_
+
+Volunteered at Atlanta Children's Shelter's Summer Science Outreach Series on July 22. Led preschoolers through exciting paper chromatography and invisible ink experiments. Witnessing their joy in revealing hidden messages and observing color separation was truly rewarding. This experience highlighted the power of early STEM education in fostering curiosity and critical thinking, especially for children facing challenges like homelessness. It was inspiring to contribute to ACS's mission of breaking the poverty cycle through education. This opportunity reinforced the impact of community engagement and motivated me to further support STEM education in underserved communities.
+
+---
+
+### STEM ATL
+
+<a id="stem-atl"></a>
+
+_May 2024_
+
+You can spot me in the second photo, lol. My student won the race!
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">400+ K-12 students, parents and volunteers attended the FREE STEM Saturday on May 18th! The &quot;Cars! Cars! Cars!&quot; event was presented by <a href="https://twitter.com/GeorgiaTech?ref_src=twsrc%5Etfw">@GeorgiaTech</a> and focused on &quot;Force and Motion.&quot; <a href="https://t.co/VPdGmC6HQ0">pic.twitter.com/VPdGmC6HQ0</a></p>&mdash; STEM NOLA (@STEMNOLA) <a href="https://twitter.com/STEMNOLA/status/1793376397140119949?ref_src=twsrc%5Etfw">May 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+---
 
 <a id="atlanta-science-festival"></a>
+
+### Atlanta Science Festival
 
 _March 2024_
 
@@ -48,9 +72,9 @@ I was a volunteering staff at the [Atlanta Science Festival](https://research.ga
 
 ---
 
-### SKKU Global Mentoring and Assisting People
-
 <a id="SG-Maple"></a>
+
+### SKKU Global Mentoring and Assisting People
 
 _December 2015 - December 2016_
 
@@ -60,10 +84,13 @@ As a [Student Buddy](https://webzine-skku-edu.translate.goog/skkuzine/section/co
 
 ---
 
-### Rural Education Support Initiative
-
 <a id="rural-education"></a>
+
+### Rural Education Support Initiative
 
 _May 2015 - August 2016_
 
 During my military service, I volunteered as a math tutor at [Yulmyeon High School](https://maps.app.goo.gl/BZrqtW3GoZsguiPb7), teaching Algebra and Pre-Calculus to students in a rural area with limited resources. I served through the Rural Education Support Initiative, developing a tailored curriculum and individualized learning strategies that focused on enhancing mathematical understanding and problem-solving skills. Beyond traditional teaching, I utilized visual aids to clarify abstract concepts and organized interactive group activities to promote a collaborative learning environment. One notable example was adapting lessons for a student from an isolated rural area who struggled with basic geometry. By using examples from his daily life, such as farm layouts to explain area and perimeter, I not only improved his understanding but also ignited his interest in math's practical applications. This experience taught me the importance of flexibility and innovation in addressing students' unique educational needs.
+
+$$
+$$
