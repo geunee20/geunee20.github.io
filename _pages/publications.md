@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 description: Explore my recent publications and contributions to the field!
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 
 <!-- _pages/publications.md -->

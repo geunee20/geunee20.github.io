@@ -170,9 +170,18 @@
 
   "volunteer": [
     {
-      "organization": "STEM Saturday",
+      "organization": "Summer Science Outreach Series",
       "position": "Instructor",
-      "url": "/volunteerings/#STEM-Saturday",
+      "url": "/volunteerings/#SSOS",
+      "startDate": "2024-07-22",
+      "endDate": "2024-07-2",
+      "summary": "Facilitated hands-on activities for preschoolers, including paper chromatography and invisible ink experiments."
+    },
+
+    {
+      "organization": "STEM ATL",
+      "position": "Instructor",
+      "url": "/volunteerings/#stem-atl",
       "startDate": "2024-05-18",
       "endDate": "2024-05-18",
       "summary": "Facilitated workshops where students built and tested model cars, applying the concepts of aerodynamics, energy conservation, and potential energy in a practical setting."
