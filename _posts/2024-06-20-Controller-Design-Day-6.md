@@ -704,9 +704,10 @@ Through my exploration of state feedback control for the inverted pendulum syste
 
 Based on these findings, my next steps will focus on implementing more advanced control strategies to address the limitations I've encountered:
 
+<!-- prettier-ignore-start -->
+
 1. **LQR Controller for Stabilization**:
    I will implement a Linear Quadratic Regulator (LQR) controller, which can be seen as an upgraded version of the pole placement method. LQR offers several advantages:
-
    - It provides a systematic way to find the optimal feedback gain matrix.
    - It allows us to balance the trade-off between control effort and state regulation through the Q and R matrices.
    - It often results in more robust control compared to simple pole placement.
@@ -715,12 +716,13 @@ Based on these findings, my next steps will focus on implementing more advanced 
 
 2. **Energy Shaping Control for Swing-Up**:
    To improve upon the Bang-Bang control used for swing-up, I will implement Energy Shaping control. This method offers several benefits:
-
    - It provides a smoother control action compared to Bang-Bang control.
    - It explicitly considers the system's energy, making it well-suited for the swing-up task.
    - It can potentially provide a more reliable transition to the stabilization controller.
 
    With Energy Shaping control, I hope to achieve more consistent swing-up performance and a smoother handover to the stabilization controller.
+
+<!-- prettier-ignore-end -->
 
 These advancements should address several of the limitations I observed:
 

@@ -300,21 +300,23 @@ To observe this, I disconnected all controllers from the input signal, effective
     Figure 3. Phase portrait of the uncontrolled pendulum system for various initial conditions, showing angle (θ) vs. angular velocity (θ̇).
 </div>
 
+<!-- prettier-ignore-start -->
+
 Key observations from this analysis:
 
 1.  Stable Limit Cycles: Some initial states result in stable limit cycles. These represent oscillations where the pendulum swings back and forth with consistent amplitude, neither gaining nor losing energy over time.
 
 2.  High Energy States: Other initial states, particularly those with higher initial energy, exhibit different behavior. These trajectories may:
-
     - Result in the pendulum completing full rotations
     - Show larger amplitude oscillations
     - Potentially lead to unstable or chaotic motion
 
 3.  Energy Conservation: In the absence of friction or other dissipative forces, the total energy of the system should remain constant. This is reflected in the closed orbits in the phase portrait.
-
     - However, due to the limitations of the ODE solver (DAESSC), my results appear slightly different from the ideal limit cycles shown in Figure 4.
 
 4.  Sensitivity to Initial Conditions: The wide variety of trajectories demonstrates the system's sensitivity to initial conditions, a characteristic of nonlinear systems.
+
+<!-- prettier-ignore-end -->
 
 <div style="width: 80%; margin: 0 auto;">
     <div class="col-sm mt-3 mt-md-0">
@@ -376,6 +378,8 @@ For the PID controller, I set the ratio of gains as $$ K_P : K_I : K_D = 100 : 1
     Figure 7. Phase portrait of pendulum angle vs. angular velocity for various PID gain values, with fixed Energy Shaping gain K = 10 and initial angle θ₀ = 90°. Vertical lines indicate the linearization region (±30°).
 </div>
 
+<!-- prettier-ignore-start -->
+
 Key observations from this analysis:
 
 1. Higher PID gains generally reduce the range of pendulum angle, unless resonance occurs between the Energy Shaping and PID controllers.
@@ -385,6 +389,8 @@ Key observations from this analysis:
 3. Finding an optimal balance between the Energy Shaping and PID gains is crucial:
    - Too small an Energy Shaping gain $$ K $$ cannot effectively swing up the pendulum.
    - Too large an Energy Shaping gain $$ K $$ can overpower the PID controller, rendering it ineffective.
+
+<!-- prettier-ignore-end -->
 
 This analysis underscores the importance of carefully tuning both the Energy Shaping and PID controllers to achieve optimal performance in swinging up the pendulum and bringing it into the linearization region where LQR control can take over for final stabilization.
 
