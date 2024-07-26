@@ -52,6 +52,8 @@ Here, $$K$$ is the feedback gain matrix that I design to achieve desired system 
 
 ### 2. Equation of Motion
 
+<a id="Equation4"></a>
+
 To understand state feedback control in practice, let's consider the example of a pendulum mounted on a cart. The following diagram illustrates the free body diagram of this system:
 
 <div style="width: 60%; margin: 0 auto;">
@@ -411,6 +413,8 @@ This control strategy ensures that the input force is always in the opposite dir
 - When the pendulum is moving counterclockwise ($$\dot{\theta} < 0$$), a positive force is applied to the cart.
 
 This strategy effectively opposes the pendulum's motion, adding energy to the system and causing the pendulum to swing with increasing amplitude until it approaches the upright position.
+
+<a id="Modeling"></a>
 
 # II. Modeling
 
