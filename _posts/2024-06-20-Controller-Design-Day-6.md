@@ -2,7 +2,7 @@
 layout: post
 title: "[Controller Design] Day 6: State Feedback Control - Pole Placement and Bang-Bang"
 date: 2024-06-20 00:00:00-0400
-description:
+description: Implementing state feedback control for inverted pendulum stabilization using pole placement and bang-bang techniques.
 tags: Simulink State_Feedback Bang-Bang Controller_Design
 categories: Study_with_Me
 disqus_comments: true
