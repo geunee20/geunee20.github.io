@@ -3,8 +3,8 @@ layout: post
 title: "[Controller Design] Day 4: PID Control with Gravity Compensation Method"
 date: 2024-05-28 00:00:00-0400
 description: Optimizing multi-link mechanism control through advanced PID strategies integrated with gravity compensation method to enhance system response and stability.
-tags: Simulink Gravity_Compensation Controller_Design
-categories: Study_with_Me
+tags: Simulink Gravity_Compensation_Method
+categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: assets/img/posts/2024-05-28-Controller-Design-Day-4/00_thumbnail.gif

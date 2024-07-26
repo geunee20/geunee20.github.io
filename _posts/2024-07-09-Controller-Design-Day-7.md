@@ -3,8 +3,8 @@ layout: post
 title: "[Controller Design] Day7: State Feedbak Control - LQR Controller and Energy Shaping"
 date: 2024-07-09 00:00:00-0400
 description: Enhancing inverted pendulum control through integrated LQR and Energy Shaping techniques for robust stabilization and efficient swing-up.
-tags: Simulink LQR Energy_Shaping Controller_Design
-categories: Study_with_Me
+tags: Simulink State_Feedback_Control Linear_Quadratic_Regulator Energy_Shaping_Control
+categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: assets/img/posts/2024-07-09-Controller-Design-Day-7/00_thumbnail.gif
