@@ -33,7 +33,7 @@ Building on the foundational understanding and adaptations to a dynamic base, th
 
 #### Phase 4: Advanced Nonlinear Control Strategies
 
-In the final phases of our project, I integrate several advanced nonlinear control strategies to handle our moving base multi-link mechanism, particularly focusing on robust and intelligent methodologies.
+In the final phases of my project, I integrate several advanced nonlinear control strategies to handle my moving base multi-link mechanism, particularly focusing on robust and intelligent methodologies.
 
 - **PID with Gravity Compensation:** Enhances basic PID control by incorporating compensation for gravitational forces acting on the system, crucial for maintaining stability and control in vertically oriented mechanisms.
 - **PID with Computed Torque Method:** Combines conventional PID control with a model-based torque computation that accounts for the dynamics of the system, significantly improving precision and response to disturbances.
