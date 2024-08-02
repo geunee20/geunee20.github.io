@@ -7,7 +7,7 @@ tags: Simulink State_Feedback_Control Linear_Quadratic_Regulator Energy_Shaping_
 categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-07-09-Controller-Design-Day-7/00_thumbnail.gif
+thumbnail: assets/img/posts/2024-07-09-Controller-Design-Day-7/00_thumbnail.png
 images:
   compare: true
   slider: true
@@ -561,8 +561,6 @@ The results of these simulations are presented in Video 5 and Figures 18 - 19.
 <div class="caption">
     Figures 18 - 19: Graphical representation of the system's regulation performance, showing cart position and pendulum angle over time for different disturbance magnitudes.
 </div>
-
-# IV. Moving Forward
 
 # IV. Moving Forward
 

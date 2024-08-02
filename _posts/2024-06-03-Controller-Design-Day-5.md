@@ -7,7 +7,7 @@ tags: Simulink Computed_Torque_Method
 categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-06-03-Controller-Design-Day-5/00_thumbnail.gif
+thumbnail: assets/img/posts/2024-06-03-Controller-Design-Day-5/00_thumbnail.png
 images:
   compare: true
   slider: true
@@ -36,6 +36,20 @@ Today, I introduce a nonlinear control system that combines a PID controller wit
 The updated methodology reduces the need for extensive parameter tuning and improves response times, making the system more reliable and user-friendly. It is particularly suited for advanced robotics and precision engineering applications where accuracy and dynamic performance are crucial.
 
 The revised block diagrams in Figures 1 and 2 illustrate how the computed torque method enhances the PID controller by leveraging the system's full dynamics to accurately predict and correct disturbances. These diagrams are referenced from Dr. Jun Ueda's lecture slides.
+
+<div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-06-03-Controller-Design-Day-5/01_block_diagram_overall.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+<div class="caption">
+    Figure 1. Block Diagram of Overall Feedback System
+</div>
+
+<div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/posts/2024-06-03-Controller-Design-Day-5/02_block_diagram_computed_torque.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+<div class="caption">
+    Figure 2. Block Diagram of Computing Torque Block
+</div>
 
 1. **Linearized Dynamics:**
    The linearized system dynamics are introduced using the equation:

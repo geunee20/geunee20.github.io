@@ -7,7 +7,7 @@ tags: Simulink State_Feedback_Control Pole_Placement_Method Bang-Bang_Control
 categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-06-20-Controller-Design-Day-6/00_thumbnail.gif
+thumbnail: assets/img/posts/2024-06-20-Controller-Design-Day-6/00_thumbnail.png
 images:
   compare: true
   slider: true
@@ -47,8 +47,6 @@ The core idea of State Feedback Control is to make the control input a linear fu
 $$ u = -Kx \tag{3} $$
 
 Here, $$K$$ is the feedback gain matrix that I design to achieve desired system behavior.
-
-<a id="Pendulum_Linearization"></a>
 
 ### 2. Equation of Motion
 
@@ -102,6 +100,8 @@ Where:
 - $$ g $$ is the acceleration due to gravity
 
 You can find the detailed calculation in [Day 3](/blog/2024/Controller-Design-Day-3/).
+
+<a id="Pendulum_Linearization"></a>
 
 ### 3. Linearization
 

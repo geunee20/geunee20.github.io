@@ -7,7 +7,7 @@ tags: Simulink PID
 categories: Study_with_Me Controller_Design
 disqus_comments: true
 related_posts: true
-thumbnail: assets/img/posts/2024-05-20-Controller-Design-Day-2/00_thumbnail.gif
+thumbnail: assets/img/posts/2024-05-20-Controller-Design-Day-2/00_thumbnail.png
 images:
   compare: true
   slider: true
