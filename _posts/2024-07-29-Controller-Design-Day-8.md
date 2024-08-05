@@ -219,9 +219,9 @@ These equations now provide me with the necessary structure to design my Sliding
 
 ##### b) Sliding Mode Controller Design
 
-In this section, I will implement the decoupled sliding mode control based on the work of Coban and Ata (2017): [Decoupled sliding mode control of an inverted pendulum on a cart: An experimental study](https://ieeexplore.ieee.org/abstract/document/8014148). This approach separates the control of the cart's position and the pendulum's angle, offering potentially better performance than coupled control methods.
+In this section, I will implement the decoupled sliding mode control based on the work of Coban and Ata (2017): `Decoupled sliding mode control of an inverted pendulum on a cart: An experimental study`. This approach separates the control of the cart's position and the pendulum's angle, offering potentially better performance than coupled control methods.
 
-Note: There is an alternative coupled sliding mode control approach by Park and Chwa (2009): [Swing-Up and Stabilization Control of Inverted-Pendulum Systems via Coupled Sliding-Mode Control Method](https://ieeexplore.ieee.org/document/4752767), which I plan to implement in future work.
+Note: There is an alternative coupled sliding mode control approach by Park and Chwa (2009): `Swing-Up and Stabilization Control of Inverted-Pendulum Systems via Coupled Sliding-Mode Control Method`, which I plan to implement in future work.
 
 1.  **Decoupled Sliding Surfaces**
 
@@ -294,11 +294,11 @@ The fundamental structure of the overall system, including the input/output and 
     Figure 1. Block Diagram of the Overall System, featuring the added Disturbance block.
 </div>
 
-Key Addition:
+**Key Addition:**
 
 - **Disturbance Block**: This new component generates random values characterized by specified magnitude and frequency.
 
-Significance of the Disturbance Block:
+**Significance of the Disturbance Block:**
 
 1. **Realism**: It simulates real-world uncertainties and external forces that can affect the inverted pendulum system.
 2. **Robustness Testing**: Allows for evaluation of the controller's performance under varying levels of disturbance.

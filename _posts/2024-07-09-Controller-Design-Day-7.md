@@ -565,7 +565,7 @@ The results of these simulations are presented in Video 5 and Figures 18 - 19.
 
 In this study, I implemented a combined control strategy using Linear Quadratic Regulator (LQR) for stabilization and Energy Shaping for swing-up control of an inverted pendulum system. This approach demonstrated significant improvements over traditional control methods, offering a more robust solution for the full range of pendulum motion.
 
-Key findings from my simulations include:
+**Key findings from my simulations include:**
 
 1. The Energy Shaping controller effectively swings up the pendulum from various initial conditions, converging to a limit cycle that brings the pendulum near the upright position.
 
@@ -575,7 +575,7 @@ Key findings from my simulations include:
 
 4. Tuning the controllers, particularly finding the right balance in the LQR cost matrices (Q and R), proved crucial for optimal performance.
 
-However, my work also revealed areas for further improvement:
+**However, my work also revealed areas for further improvement:**
 
 1. The current tuning process, focused on a single initial condition, led to inconsistent performance across different scenarios. Future work should explore multi-objective optimization to enhance robustness across various initial conditions and disturbances.
 
