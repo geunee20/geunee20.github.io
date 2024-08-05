@@ -2,7 +2,6 @@
 layout: post
 title: "[Controller Design] Day 6: State Feedback Control - Pole Placement and Bang-Bang"
 date: 2024-06-20 00:00:00-0400
-description: Implementing state feedback control for inverted pendulum stabilization using pole placement and bang-bang techniques.
 tags: Simulink State_Feedback_Control Pole_Placement_Method Bang-Bang_Control
 categories: Study_with_Me Controller_Design
 disqus_comments: true
@@ -698,7 +697,7 @@ Based on the simulations, I concluded that the best pole placement for this syst
     Figure 19. System response showing instability when subjected to disturbances greater than 2N with the controller at s = -10.
 </div>
 
-# IV. Moving Forward
+# IV. Conclusion and Moving Forward
 
 Through my exploration of state feedback control for the inverted pendulum system, I've gained valuable insights into both the strengths and limitations of the pole placement method and Bang-Bang control. My simulations demonstrated the effectiveness of these approaches within certain bounds, but also revealed challenges when dealing with large disturbances or initial conditions.
 
@@ -724,7 +723,7 @@ Based on these findings, my next steps will focus on implementing more advanced 
 
 <!-- prettier-ignore-end -->
 
-These advancements should address several of the limitations I observed:
+**These advancements should address several of the limitations I observed:**
 
 - The sensitivity to pole placement that I encountered should be mitigated by the LQR's systematic approach to gain selection.
 - The challenges in transitioning from swing-up to stabilization control should be reduced with the more sophisticated Energy Shaping method.

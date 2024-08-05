@@ -2,7 +2,6 @@
 layout: post
 title: "[Controller Design] Day 4: PID Control with Gravity Compensation Method"
 date: 2024-05-28 00:00:00-0400
-description: Optimizing multi-link mechanism control through advanced PID strategies integrated with gravity compensation method to enhance system response and stability.
 tags: Simulink Gravity_Compensation_Method
 categories: Study_with_Me Controller_Design
 disqus_comments: true
@@ -297,7 +296,7 @@ Videos 10 through 13 and Figures 18 through 21 demonstrate the tracking capabili
     Figures 18 - 21. Analysis of Angular Displacement in the Triple-Link Mechanism with Moving Base Across Various Disturbances.
 </div>
 
-# IV. Moving Forward
+# IV. Conclusion and Moving Forward
 
 Today, I managed a fully actuated multi-link mechanism using a PID controller complemented by gravity compensation. The simulations revealed that gravity compensation significantly enhances stabilization by maintaining a high angular velocity when the angular displacement is minimal. Upon examining the torque feedback, I observed that gravity compensation acts as a counterbalance to the feedback from the PID, effectively reducing torque overshoot. Therefore, in scenarios involving only slight angular displacements, incorporating gravity compensation can markedly improve system performance.
 

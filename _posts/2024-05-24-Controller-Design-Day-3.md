@@ -2,7 +2,6 @@
 layout: post
 title: "[Controller Design] Day 3: The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
 date: 2024-05-24 00:00:00-0400
-description: Analyzing the equations of motion and Jacobians for a triple-link mechanism with fixed and moving bases, essential for advanced control designs.
 tags: Equation_of_Motion
 categories: Study_with_Me Controller_Design
 disqus_comments: true
@@ -324,7 +323,7 @@ $$
 
 These equations of motion may appear unconventional because the angle reference $$ \theta_1 $$ is defined from the horizontal (positive x-axis), rather than the more typical vertical reference. This orientation alters the trigonometric components and their interactions within the dynamic model, influencing how terms involving $$ \sin(\theta_1) $$ and $$ \cos(\theta_1) $$ are applied in the system's matrix representation.
 
-# III. Moving Forward
+# III. Conclusion
 
 Today, I derived the equations of motion for a triple-link mechanism with both fixed and moving bases. These results will be instrumental in developing advanced control mechanisms such as gravity compensation control, Jacobian transpose control, and controllers for underactuated systems. Please stay tuned for more updates!
 

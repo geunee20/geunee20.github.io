@@ -2,7 +2,6 @@
 layout: post
 title: "[Controller Design] Day 5: PID Control with Computed Torque Method"
 date: 2024-06-03 00:00:00-0400
-description: Refining multi-link mechanism control using PID techniques combined with the computed torque method for improved precision and dynamic stability.
 tags: Simulink Computed_Torque_Method
 categories: Study_with_Me Controller_Design
 disqus_comments: true
@@ -436,7 +435,7 @@ Similar to the tracking simulation, I also simulated the regulation of an unstab
     Figure 20. Graphs of Joint Parameters with \( K_p = 10, K_i = 300, K_d = 20, F = 1N \).
 </div>
 
-# IV. Moving Forward
+# IV. Conclusion
 
 Today, I enhanced the control of a fully actuated multi-link mechanism using a PID controller integrated with the computed torque method. Compared to standalone PID control and PID with gravity compensation, this approach demonstrated superior performance. One notable advantage is that this system achieves full linearity through feedback linearization, simplifying the control loop.
 

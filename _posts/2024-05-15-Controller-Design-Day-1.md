@@ -2,7 +2,6 @@
 layout: post
 title: "[Controller Design] Day 1: Creating the Multibody System Using Simscape"
 date: 2024-05-15 00:00:00-0000
-description: Exploring the dynamics of a multi-link mechanism by constructing and simulating a multibody system using Simscape.
 tags: Simulink Simscape
 categories: Study_with_Me Controller_Design
 disqus_comments: true
@@ -194,7 +193,7 @@ Conversely, Video 4 and Figure 11, akin to Video 2 and Figure 7, display the cha
     Figure 11. Angular Displacement Analysis of Chaotic Motion in the Multi-Link Mechanism with Moving Base.
 </div>
 
-# III. Moving Forward
+# III. Conclusion
 
 I chose different lengths for the multi-link mechanism primarily due to controllability concerns. Varying the lengths has helped in understanding how each variation impacts the system's ability to be controlled, thus informing the development of more effective control strategies.
 
