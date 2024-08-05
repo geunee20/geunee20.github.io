@@ -762,7 +762,14 @@ To address the chattering observed in our initial simulations, two potential sol
 1. **Adaptive Gain**: Vary $$K$$ based on the distance between states and the sliding surface.
 2. **Alternative Functions**: Replace $$\text{sgn}(x)$$ with a continuous function to reduce chattering effects.
 
-These modifications aim to enhance the controller's performance by balancing quick response and stability.
+<div style="width: 60%; margin: 0 auto;">
+  <div class="col-sm mt-3 mt-md-0">
+      {% include figure.liquid loading="eager" path="assets/img/posts/2024-07-29-Controller-Design-Day-8/20_sign_vs_sat.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
+</div>
+<div class="caption">
+  Ref. by Nam et al. (2015): "Design of an adaptive sliding mode controller for robust yaw stabilisation of in-wheel-motor-driven electric vehicles"
+</div>
 
 **Implementation of Saturation Function**
 
