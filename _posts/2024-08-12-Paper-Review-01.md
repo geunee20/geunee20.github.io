@@ -183,7 +183,6 @@ The authors conduct a comprehensive analysis of how time delays and filtering im
 
 1. **Scenario Analysis**:
    Four scenarios are examined to isolate the effects of delays and filtering:
-
    - $$Z_i(j\omega)$$: Ideal impedance (no delays or filtering)
    - $$Z_f(j\omega)$$: Impedance with filtering only
    - $$Z_d(j\omega)$$: Impedance with delays only
@@ -223,7 +222,6 @@ The authors investigate how load inertia ($$I_j$$) influences SEA impedance char
    Where $$Z(j\omega)$$ is the original SEA impedance, $$I_j$$ is the load inertia, and $$b_j$$ is the damping coefficient.
 
 2. **Frequency-Dependent Behavior**:
-
    - At high frequencies, the SEA impedance becomes dominated by load inertia:
 
      $$

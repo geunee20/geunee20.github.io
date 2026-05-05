@@ -242,7 +242,6 @@ Note: There is an alternative coupled sliding mode control approach by Park and 
     $$
 
     where:
-
     - $$C_x$$ and $$C_{\theta}$$ are positive constants that determine the slope of the sliding surfaces
     - $$z$$ is a nonlinear function that couples the two sliding surfaces:
 
@@ -270,13 +269,11 @@ Note: There is an alternative coupled sliding mode control approach by Park and 
     $$
 
     where:
-
     - $$u_{eq}$$ is the equivalent control term:
 
     $$
     u_{eq} = \frac{-C_{\theta}\theta-f_{\theta}}{g_{\theta}} \tag{23}
     $$
-
     - $$K$$ is a positive constant gain
     - $$\phi_{\theta}$$ is a positive constant similar to $$\phi_x$$
     - $$f_{\theta}$$ and $$g_{\theta}$$ are as defined in the previous section

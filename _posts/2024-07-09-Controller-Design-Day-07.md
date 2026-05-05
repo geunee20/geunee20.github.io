@@ -37,14 +37,12 @@ The LQR is a fundamental control strategy used in control systems engineering to
     $$
 
     Here, $$Q$$ and $$R$$ are weighting matrices. $$Q$$ should be positive semi-definite, and $$R$$ positive definite, prioritizing state precision and control effort respectively.
-
     - **Matrix $$Q$$** - State Cost Matrix:
       - **Purpose**: Weighs the state errors, penalizing deviations from desired states.
       - **Properties**: Positive semi-definite to ensure non-negative cost for state errors.
       - **Effect**: Higher values prioritize accuracy in corresponding state variables.
 
     <div style="height: 20px;"></div>
-
     - **Matrix $$R$$** - Control Effort Cost Matrix:
       - **Purpose**: Weighs the control effort, penalizing excessive use of control inputs.
       - **Properties**: Positive definite to ensure all control efforts have a positive associated cost.
@@ -69,7 +67,6 @@ The LQR is a fundamental control strategy used in control systems engineering to
     $$
     K = R^{-1}B^T P \tag{5}
     $$
-
     - **Matrix $$P$$** - Solution to the Riccati Equation:
       - **Purpose**: Balances the trade-off between tracking performance and control effort in the cost function.
       - **Properties**: Symmetric positive definite.
