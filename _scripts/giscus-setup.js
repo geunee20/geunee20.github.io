@@ -35,6 +35,7 @@ function determineGiscusTheme() {
     "data-input-position": "{{ site.giscus.input_position }}",
     "data-theme": giscusTheme,
     "data-lang": "{{ site.giscus.lang }}",
+    "data-loading": "{{ site.giscus.loading | default: 'lazy' }}",
     crossorigin: "anonymous",
     async: true,
   };

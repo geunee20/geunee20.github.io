@@ -108,8 +108,8 @@ related_blog_posts:
 giscus:
   repo: geunee20/geunee20.github.io # <your-github-user-name>/<your-github-repo-name>
   repo_id: R_kgDOSVM5IA # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # set this from giscus.app (required for comments to load)
+  category: General # name of the category under which discussions will be created
+  category_id: DIC_kwDOSVM5IM4C8Zo4 # set this from giscus.app (required for comments to load)
   mapping: title # identify discussions by post title
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
@@ -118,6 +118,7 @@ giscus:
   light_theme: preferred_color_scheme # name of the light color scheme (preferred works well with al-folio light mode)
   emit_metadata: 0
   lang: ko
+  loading: lazy # giscus script loading behavior
 
 # Disqus comments (DEPRECATED)
 disqus_shortname: # leave blank when using giscus
