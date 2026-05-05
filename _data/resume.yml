@@ -1,0 +1,120 @@
+basics:
+  name: Min-Geun Park
+  label: Mechanical Engineer
+  email: geunee20@gmail.com
+  summary: >
+    Mechanical engineer focused on intelligent mechatronics, controller design,
+    nonlinear dynamics, and real-time robotics systems.
+
+work:
+  - name: Georgia Institute of Technology
+    position: Graduate Teaching Assistant
+    startDate: 2023-08-14
+    endDate: 2024-05-18
+    url: /teaching/#me4452
+    highlights:
+      - Instructor: Dr. Kok-Meng Lee
+      - ME4452 Control Dynamic Systems
+      - Topics: Classical Control Methods, Modern Control Methods, System Modeling and Analysis
+      - Received 4.9/5.0 in TA evaluations with 100% student endorsement for future courses.
+      - Guided 60+ students in advanced control topics through office hours and review sessions using MATLAB SISO Tool.
+
+  - name: Advanced Intelligent Mechatronics Research Laboratory (AIMRL) - Georgia Tech
+    position: Development and Control of a Magnetic Series Elastic Actuator (Mag-SEA)
+    startDate: 2023-08-14
+    url: https://aimrl.gatech.edu/
+    highlights:
+      - Supervisor: Dr. Kok-Meng Lee
+      - Prototyped and optimized Mag-SEA hardware and designed a comparative mechanical SEA.
+      - Simulated stability and performance and developed embedded real-time impedance control with wireless data transfer.
+
+  - name: Adaptive Robotic Manipulation (ARM) Laboratory - Georgia Tech
+    position: Design and Control of Pneumatic Variable-Stiffness Joints for Underactuated Gripper
+    startDate: 2021-08-16
+    endDate: 2022-12-06
+    url: https://armlab.gatech.edu/
+    highlights:
+      - Supervisor: Dr. Frank Hammond
+      - Built and refined a pneumatic variable-stiffness underactuated gripper, improving workspace by 20%.
+      - Developed stiffness-tension-position models and embedded control for adaptive tendon tension control.
+
+education:
+  - institution: Georgia Institute of Technology
+    area: Mechanical Engineering
+    studyType: Master
+    startDate: 2023-08-14
+    endDate: 2024-05-18
+    courses:
+      - GPA: 4.0/4.0
+
+  - institution: Georgia Institute of Technology
+    area: Mechanical Engineering
+    studyType: Bachelor
+    startDate: 2019-05-13
+    endDate: 2023-05-04
+    courses:
+      - GPA: 3.93/4.0
+      - Minor in Computing & Intelligence
+
+publications:
+  - releaseDate: 2024-07
+    url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BtnYdO4AAAAJ&citation_for_view=BtnYdO4AAAAJ:d1gkVwhDpl0C
+    name: Magnetic Stiffness of Soft Continuous Permanent Magnet and its Parametric Effects on a Magnetic Series Elastic Actuator Control System
+    publisher: IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)
+
+projects:
+  - name: Design and Evaluation of Control Systems for Inverted Pendulum
+    startDate: 2024-05
+    endDate: present
+    url: /blog/tag/controller-design/
+    highlights:
+      - Applied classical, modern, and optimal controllers (PID, Bang-Bang, Pole-Placement, Sliding Mode, Computed Torque, LQR, MPC).
+      - Simulated nonlinear dynamics in MATLAB/Simulink and Simscape to compare robustness under disturbances and uncertainties.
+
+skills:
+  - name: Engineering Software
+    keywords:
+      - MATLAB
+      - Simulink
+      - SolidWorks
+      - Ansys
+      - AutoCAD
+
+  - name: Measurement & Fabrication
+    keywords:
+      - Laser Tracker
+      - Quadrature Encoder
+      - 3D Printing
+      - Laser Cutting
+
+  - name: Programming Languages
+    keywords:
+      - Python
+      - C/C++
+      - Java
+      - JavaScript
+
+  - name: Frameworks & Libraries
+    keywords:
+      - Pytorch
+      - TensorFlow
+      - ROS (Robot Operating System)
+
+interests:
+  - name: Fundamentals
+    keywords:
+      - Intelligent Mechatronics
+      - Control Theory
+      - Nonlinear Dynamics
+
+  - name: Methods
+    keywords:
+      - Embedded Systems Development
+      - Advanced Control Techniques
+      - System Modeling and Simulation
+
+  - name: Applications
+    keywords:
+      - Real-Time Control Systems
+      - Robotics and Automation
+      - Human-Machine Interaction

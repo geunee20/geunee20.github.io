@@ -1,35 +1,73 @@
+{% assign max_related = site.related_blog_posts.max_related | default: site.posts.size | plus: 0 %}
 {% assign have_related_posts = false %}
-{% for post in site.related_posts | limit: site.related_blog_posts.max_related %}
-  {% unless have_related_posts %}
-    {% assign have_related_posts = true %}
-    {% if page.layout == 'post' %}
-      <br>
-      <hr>
-      <br>
-      <ul class="list-disc pl-8"></ul>
+{% assign shown_count = 0 %}
+{% assign selected_urls = '||' %}
+
+{% for post in site.related_posts %}
+  {% if shown_count >= max_related %}
+    {% break %}
+  {% endif %}
+
+  {% if shown_count < max_related and post.redirect == blank and post.url != page.url %}
+    {% unless have_related_posts %}
+      {% assign have_related_posts = true %}
+      {% if page.layout == 'post' %}
+        <br>
+        <hr>
+        <br>
+      {% endif %}
 
       <!-- Adds related posts to the end of an article -->
       <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-    {% else %}
-      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-    {% endif %}
+      <p class="mb-2">Here are some more articles you might like to read next:</p>
+      <ul class="list-disc pl-8">
+    {% endunless %}
 
-    <p class="mb-2">Here are some more articles you might like to read next:</p>
-  {% endunless %}
-
-  <li class="my-2">
-    {% if post.redirect == blank %}
+    <li class="my-2">
       <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% elsif post.redirect contains '://' %}
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-      <svg width="1rem" height="1rem" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    {% else %}
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-    {% endif %}
-  </li>
+    </li>
+
+    {% assign shown_count = shown_count | plus: 1 %}
+    {% assign selected_urls = selected_urls | append: post.url | append: '||' %}
+  {% endif %}
 {% endfor %}
+
+{% assign shuffled_posts = site.posts | shuffle %}
+{% for post in shuffled_posts %}
+  {% if shown_count >= max_related %}
+    {% break %}
+  {% endif %}
+
+  {% assign post_marker = '||' | append: post.url | append: '||' %}
+  {% unless selected_urls contains post_marker %}
+    {% if shown_count < max_related and post.redirect == blank and post.url != page.url %}
+      {% unless have_related_posts %}
+        {% assign have_related_posts = true %}
+        {% if page.layout == 'post' %}
+          <br>
+          <hr>
+          <br>
+        {% endif %}
+
+        <!-- Adds related posts to the end of an article -->
+        <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+        <p class="mb-2">Here are some more articles you might like to read next:</p>
+        <ul class="list-disc pl-8">
+      {% endunless %}
+
+      <li class="my-2">
+        <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+
+      {% assign shown_count = shown_count | plus: 1 %}
+      {% assign selected_urls = selected_urls | append: post.url | append: '||' %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+
+{% if have_related_posts %}
+  </ul>
+{% endif %}
 {% if site.newsletter.enabled and site.footer_fixed %}
   <p class="mb-2" style="margin-top: 1.5rem !important">Subscribe to be notified of future articles:</p>
   {% include newsletter.liquid left=true %}

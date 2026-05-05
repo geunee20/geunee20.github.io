@@ -1,15 +1,45 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
-nav: true
-nav_order: 6
-calendar: true
+title: Teaching
+description: Here is a list of courses that I am TAing/TA’ed.
+nav: false
+nav_order: 3
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+### Georgia Institute of Technology
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+<a id="me4452"></a>
 
-{% include courses.liquid %}
+<p style="margin-bottom: 0;">
+  <strong>ME4452 - Control of Dynamic Systems</strong> <br>
+  <span style="margin-left: 20px;"><em>Spring '24, Fall '23</em></span>
+</p>
+
+<ul style="margin-top: 0;">
+  <li>
+    Topics: Classical Control Methods, Modern Control Methods, System Modeling and Analysis
+  </li>
+  <li>
+    Earned a 4.9/5.0 rating in TA evaluations with 100\% student endorsement while guiding 60+ students in advanced control systems through office hours and review sessions.
+  </li>
+  <li>
+    Utilized MATLAB's SISO Tool to efficiently visualize system behavior and quickly tune control parameters, allowing students to explore real-time effects of parameter changes.
+  </li>
+  <li>
+    Review Sessions
+  </li>
+<table style="border-collapse: collapse; width: 80%;">
+  <tr>
+    <td style="border: none; padding: 5px;"><strong>Spring '24</strong></td>
+    <td style="border: none; padding: 5px;"><a href="/teachings/3_24_Sp_MT1" style="text-decoration: none; color: inherit;">Midterm 1</a></td>
+    <td style="border: none; padding: 5px;"><a href="/teachings/4_24_Sp_MT2" style="text-decoration: none; color: inherit;">Midterm 2</a></td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 5px;"><strong>Fall '23</strong></td>
+    <td style="border: none; padding: 5px;"><a href="/teachings/1_23_Fa_MT1" style="text-decoration: none; color: inherit;">Midterm 1</a></td>
+    <td style="border: none; padding: 5px;"><a href="/teachings/2_23_Fa_MT2" style="text-decoration: none; color: inherit;">Midterm 2</a></td>
+  </tr>
+</table>
+
+</ul>
