@@ -20,8 +20,8 @@ function determineGiscusTheme() {
     src: "https://giscus.app/client.js",
     "data-repo": "geunee20/geunee20.github.io",
     "data-repo-id": "R_kgDOSVM5IA",
-    "data-category": "Comments",
-    "data-category-id": "",
+    "data-category": "General",
+    "data-category-id": "DIC_kwDOSVM5IM4C8Zo4",
     "data-mapping": "title",
     "data-strict": "1",
     "data-reactions-enabled": "1",
@@ -29,6 +29,7 @@ function determineGiscusTheme() {
     "data-input-position": "top",
     "data-theme": giscusTheme,
     "data-lang": "ko",
+    "data-loading": "lazy",
     crossorigin: "anonymous",
     async: true,
   };
