@@ -15,8 +15,8 @@ nav_order: 3
 
 ### {{ institution }}
 
-  {% assign courses = site.teachings | where: "teaching_type", "course" | sort: "url" | reverse | where: "institution", institution %}
-  {% for course in courses %}
+{% assign courses = site.teachings | where: "teaching_type", "course" | sort: "url" | reverse | where: "institution", institution %}
+{% for course in courses %}
 <a id="{{ course.course_id | downcase }}"></a>
 
 **{{ course.course_id }} - {{ course.course_name }}** — *{{ course.semesters }}*
@@ -26,5 +26,5 @@ nav_order: 3
 ---
 
 {% endunless %}
-  {% endfor %}
+{% endfor %}
 {% endfor %}
