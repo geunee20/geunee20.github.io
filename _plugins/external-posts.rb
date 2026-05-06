@@ -57,9 +57,9 @@ module ExternalPosts
         slug = "#{source_name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')}-#{url.split('/').last}" if slug.empty?
       end
 
-      path = site.in_source_dir("_posts/#{slug}.md")
+      path = site.in_source_dir("contents/_articles/#{slug}/index.md")
       doc = Jekyll::Document.new(
-        path, { :site => site, :collection => site.collections['posts'] }
+        path, { :site => site, :collection => site.collections['articles'] }
       )
       doc.data['external_source'] = source_name
       doc.data['title'] = content[:title]
@@ -77,7 +77,7 @@ module ExternalPosts
       end
       
       doc.content = content[:content]
-      site.collections['posts'].docs << doc
+      site.collections['articles'].docs << doc
     end
 
     def fetch_from_urls(site, src)

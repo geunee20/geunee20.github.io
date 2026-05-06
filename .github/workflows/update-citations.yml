@@ -33,8 +33,8 @@ jobs:
         id: before
         run: |
           echo "📦 Checking existing citations.yml hash..."
-          if [ -f _data/citations.yml ]; then
-            sha_before=$(sha256sum _data/citations.yml | awk '{print $1}')
+          if [ -f contents/_data/citations.yml ]; then
+            sha_before=$(sha256sum contents/_data/citations.yml | awk '{print $1}')
             echo "sha_before=$sha_before" >> $GITHUB_OUTPUT
             echo "📝 SHA before: $sha_before"
           else
@@ -65,8 +65,8 @@ jobs:
         id: after
         run: |
           echo "🔍 Checking updated citations.yml hash..."
-          if [ -f _data/citations.yml ]; then
-            sha_after=$(sha256sum _data/citations.yml | awk '{print $1}')
+          if [ -f contents/_data/citations.yml ]; then
+            sha_after=$(sha256sum contents/_data/citations.yml | awk '{print $1}')
             echo "sha_after=$sha_after" >> $GITHUB_OUTPUT
             echo "📝 SHA after: $sha_after"
           else
@@ -78,11 +78,11 @@ jobs:
         run: |
           echo "📋 Comparing citation file hashes..."
           if [ "${{ steps.before.outputs.sha_before }}" != "${{ steps.after.outputs.sha_after }}" ]; then
-            echo "✅ _data/citations.yml was updated."
-            echo "✅ _data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
+            echo "✅ contents/_data/citations.yml was updated."
+            echo "✅ contents/_data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
           else
-            echo "ℹ️ _data/citations.yml was not changed."
-            echo "ℹ️ _data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ contents/_data/citations.yml was not changed."
+            echo "ℹ️ contents/_data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Configure Git
@@ -93,7 +93,7 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          git add _data/citations.yml
+          git add contents/_data/citations.yml
           git diff --staged --quiet || (
             echo "📤 Committing and pushing changes..."
             git commit -m "Update Google Scholar citations"

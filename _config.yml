@@ -144,6 +144,10 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
+  posts:
+    output: true
+  articles:
+    output: true
   books:
     output: true
   news:
@@ -153,6 +157,8 @@ collections:
   projects:
     output: true
   teachings:
+    output: true
+  volunteerings:
     output: true
 
 # -----------------------------------------------------------------------------
@@ -173,7 +179,10 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+collections_dir: contents
+data_dir: contents/_data
+
+include: ["_scripts", "_pages"]
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -226,6 +235,11 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: post
 
 sass:
   style: compressed
@@ -251,7 +265,7 @@ terser:
 # -----------------------------------------------------------------------------
 
 jekyll-archives:
-  posts:
+  articles:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
     permalinks:
       year: "/blog/:year/"
@@ -274,7 +288,7 @@ scholar:
   style: ieee
   locale: en
 
-  source: /_bibliography/
+  source: contents/_bibliography
   bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
