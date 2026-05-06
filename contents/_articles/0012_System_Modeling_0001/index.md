@@ -58,7 +58,7 @@ We first write the rotational and translational equations separately, then conne
 The rotational dynamics of the screw can be written as
 
 \begin{equation}
-J\ddot{\theta} + B_r\dot{\theta} + T_{\text{load}} = T
+J\ddot{\theta} + B*r\dot{\theta} + T*{\text{load}} = T
 \label{eq:rotational_eom}
 \end{equation}
 
@@ -67,28 +67,28 @@ where $$\ddot{\theta}$$ is the angular acceleration, $$\dot{\theta}$$ is the ang
 For a forward-driving leadscrew, the useful linear work over one revolution is
 
 \begin{equation}
-W_{\text{out}} = Fp
+W\_{\text{out}} = Fp
 \label{eq:output_work}
 \end{equation}
 
 and the rotational input work is
 
 \begin{equation}
-W_{\text{in}} = T_{\text{load}}(2\pi)
+W*{\text{in}} = T*{\text{load}}(2\pi)
 \label{eq:input_work}
 \end{equation}
 
 Using the efficiency definition
 
 \begin{equation}
-\eta = \frac{W_{\text{out}}}{W_{\text{in}}}
+\eta = \frac{W*{\text{out}}}{W*{\text{in}}}
 \label{eq:efficiency_definition}
 \end{equation}
 
 we obtain
 
 \begin{equation}
-T_{\text{load}} = \frac{Fp}{2\pi\eta}
+T\_{\text{load}} = \frac{Fp}{2\pi\eta}
 \label{eq:equivalent_load_torque}
 \end{equation}
 
@@ -150,28 +150,26 @@ Using \eqref{eq:translational_eom} and the kinematic relationship in \eqref{eq:k
 F = \frac{p}{2\pi}
 \left(
 m\ddot{\theta}
-+
-b_t\dot{\theta}
-+
-k\theta
-\right)
-\label{eq:force_theta_domain}
-\end{equation}
+
+- b_t\dot{\theta}
+- k\theta
+  \right)
+  \label{eq:force_theta_domain}
+  \end{equation}
 
 Substituting \eqref{eq:force_theta_domain} into \eqref{eq:equivalent_load_torque} gives
 
 \begin{equation}
-T_{\text{load}}
+T\_{\text{load}}
 =
 \frac{p^2}{(2\pi)^2\eta}
 \left(
 m\ddot{\theta}
-+
-b_t\dot{\theta}
-+
-k\theta
-\right)
-\end{equation}
+
+- b_t\dot{\theta}
+- k\theta
+  \right)
+  \end{equation}
 
 Substituting this result into \eqref{eq:rotational_eom} yields
 
@@ -179,16 +177,14 @@ Substituting this result into \eqref{eq:rotational_eom} yields
 \left(
 J + \frac{mp^2}{(2\pi)^2\eta}
 \right)\ddot{\theta}
-+
-\left(
-B_r + \frac{b_t p^2}{(2\pi)^2\eta}
-\right)\dot{\theta}
-+
-\frac{k p^2}{(2\pi)^2\eta}\theta
-=
-T
-\label{eq:combined_rotational_domain}
-\end{equation}
+
+- \left(
+  B_r + \frac{b_t p^2}{(2\pi)^2\eta}
+  \right)\dot{\theta}
+- # \frac{k p^2}{(2\pi)^2\eta}\theta
+  T
+  \label{eq:combined_rotational_domain}
+  \end{equation}
 
 Equation \eqref{eq:combined_rotational_domain} expresses the leadscrew-driven system in the rotational domain. The translational mass, damping, and stiffness are reflected to the screw side through the factor $$p^2/(2\pi)^2\eta$$.
 
@@ -201,18 +197,17 @@ Using the inverse kinematic relationship in \eqref{eq:inverse_kinematic_relation
 J + \frac{mp^2}{(2\pi)^2\eta}
 \right)
 \frac{2\pi}{p}\ddot{x}
-+
-\left(
-B_r + \frac{b_t p^2}{(2\pi)^2\eta}
-\right)
-\frac{2\pi}{p}\dot{x}
-+
-\frac{k p^2}{(2\pi)^2\eta}
-\frac{2\pi}{p}x
-=
-T
-\label{eq:substituted_linear_domain}
-\end{equation}
+
+- \left(
+  B_r + \frac{b_t p^2}{(2\pi)^2\eta}
+  \right)
+  \frac{2\pi}{p}\dot{x}
+- \frac{k p^2}{(2\pi)^2\eta}
+  \frac{2\pi}{p}x
+  =
+  T
+  \label{eq:substituted_linear_domain}
+  \end{equation}
 
 Multiplying both sides of \eqref{eq:substituted_linear_domain} by $$2\pi\eta/p$$ yields
 
@@ -220,30 +215,28 @@ Multiplying both sides of \eqref{eq:substituted_linear_domain} by $$2\pi\eta/p$$
 \left(
 m + \frac{(2\pi)^2\eta J}{p^2}
 \right)\ddot{x}
-+
-\left(
-b_t + \frac{(2\pi)^2\eta B_r}{p^2}
-\right)\dot{x}
-+
-kx
-=
-\frac{2\pi\eta}{p}T
-\label{eq:combined_linear_domain}
-\end{equation}
+
+- \left(
+  b_t + \frac{(2\pi)^2\eta B_r}{p^2}
+  \right)\dot{x}
+- # kx
+  \frac{2\pi\eta}{p}T
+  \label{eq:combined_linear_domain}
+  \end{equation}
 
 The coefficients in Eq. \eqref{eq:combined_linear_domain} correspond to the equivalent mass and damping reflected to the translational domain.
 
 Therefore, the equivalent linear parameters are
 
 \begin{equation}
-m_{\text{eq}}
+m\_{\text{eq}}
 =
 m + \frac{(2\pi)^2\eta J}{p^2}
 \label{eq:equivalent_mass}
 \end{equation}
 
 \begin{equation}
-b_{\text{eq}}
+b\_{\text{eq}}
 =
 b_t + \frac{(2\pi)^2\eta B_r}{p^2}
 \label{eq:equivalent_damping}
@@ -252,7 +245,7 @@ b_t + \frac{(2\pi)^2\eta B_r}{p^2}
 and
 
 \begin{equation}
-F_{\text{input}}
+F\_{\text{input}}
 =
 \frac{2\pi\eta}{p}T
 \label{eq:equivalent_input_force}
@@ -261,15 +254,13 @@ F_{\text{input}}
 Thus, Eq. \eqref{eq:combined_linear_domain} can be written compactly as
 
 \begin{equation}
-m_{\text{eq}}\ddot{x}
-+
-b_{\text{eq}}\dot{x}
-+
-kx
-=
-F_{\text{input}}
-\label{eq:compact_linear_domain}
-\end{equation}
+m\_{\text{eq}}\ddot{x}
+
+- b\_{\text{eq}}\dot{x}
+- # kx
+  F\_{\text{input}}
+  \label{eq:compact_linear_domain}
+  \end{equation}
 
 ### IV. Remarks on Efficiency and Model Limitations
 
