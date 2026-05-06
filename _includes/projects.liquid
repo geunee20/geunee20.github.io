@@ -2,10 +2,17 @@
   <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
     <div class="card h-100 hoverable">
       {% if project.img %}
+        {% if project.img contains './' %}
+          {% assign project_base = project.url | remove: '/index' %}
+          {% assign img_rel = project.img | remove_first: './' %}
+          {% assign resolved_img = project_base | append: '/' | append: img_rel | replace: '//', '/' %}
+        {% else %}
+          {% assign resolved_img = project.img %}
+        {% endif %}
         {%
           include figure.liquid
           loading="eager"
-          path=project.img
+          path=resolved_img
           sizes = "250px"
           alt="project thumbnail"
           class="card-img-top"

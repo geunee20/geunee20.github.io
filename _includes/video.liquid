@@ -1,9 +1,14 @@
-{% assign extension = include.path | split: '.' | last %}
+{% assign media_path = include.path %}
+{% assign path_prefix = include.path | default: '' | slice: 0, 2 %}
+{% if path_prefix == './' %}
+  {% assign media_path = include.path | remove_first: './' | prepend: page.url %}
+{% endif %}
+{% assign extension = media_path | split: '.' | last %}
 
 <figure>
   {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
     <video
-      src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+      src="{% if include.cache_bust %}{{ media_path | relative_url | bust_file_cache }}{% else %}{{ media_path | relative_url }}{% endif %}"
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}

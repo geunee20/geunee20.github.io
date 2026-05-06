@@ -1,6 +1,21 @@
-{% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
-{% assign parts = include.path | split: '.' %}
+{% assign media_path = include.path %}
+{% assign path_prefix = include.path | default: '' | slice: 0, 2 %}
+{% if path_prefix == './' %}
+  {% assign media_path = include.path | remove_first: './' | prepend: page.url %}
+{% endif %}
+{% assign img_path = media_path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
+{% assign parts = media_path | split: '.' %}
 {% assign ext = parts.last %}
+{% assign is_raster = false %}
+{% if ext == 'gif' or ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
+  {% assign is_raster = true %}
+{% endif %}
+{% assign assets_prefix_12 = media_path | slice: 0, 12 %}
+{% assign assets_prefix_11 = media_path | slice: 0, 11 %}
+{% assign root_assets_image = false %}
+{% if assets_prefix_12 == '/assets/img/' or assets_prefix_11 == 'assets/img/' %}
+  {% assign root_assets_image = true %}
+{% endif %}
 
 <figure
   {% if include.slot %}
@@ -13,16 +28,12 @@
       See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
       https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
     -->
-    {% if site.imagemagick.enabled %}
+    {% if site.imagemagick.enabled and root_assets_image and is_raster %}
       {% unless include.avoid_scaling %}
         <source
           class="responsive-img-srcset"
-          {% if ext == 'gif' or ext == 'jpeg' or ext == 'jpg' or ext == 'png' or ext == 'tiff' %}
-            srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
-            type="image/webp"
-          {% else %}
-            srcset="{{ include.path | relative_url }}"
-          {% endif %}
+          srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{ i }}w,{% endfor %}"
+          type="image/webp"
           {% if include.sizes %}
             sizes="{{ include.sizes }}"
           {% else %}
@@ -32,7 +43,7 @@
       {% endunless %}
     {% endif %}
     <img
-      src="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+      src="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ media_path | relative_url | bust_file_cache }}{% else %}{{ media_path | relative_url }}{% endif %}"
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}

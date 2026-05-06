@@ -8,8 +8,14 @@
   <button type="button" class="image-slider__nav image-slider__nav--prev" aria-label="Previous slide">&#10094;</button>
   <div class="image-slider__track">
     {% for image in include.images %}
+      {% assign image_path = image.path %}
+      {% assign path_prefix = image.path | default: '' | slice: 0, 2 %}
+      {% if path_prefix == './' %}
+        {% assign page_base_url = page.url | replace: '/index.html', '/' | replace: '/index', '/' | replace: '//', '/' | replace: '//', '/' %}
+        {% assign image_path = image.path | remove_first: './' | prepend: page_base_url %}
+      {% endif %}
       <div class="image-slider__slide{% if forloop.first %} is-active{% endif %}">
-        <img src="{{ image.path | relative_url }}" alt="{{ image.alt | default: 'Slide image' }}" class="image-slider__img">
+        <img src="{{ image_path | relative_url }}" alt="{{ image.alt | default: 'Slide image' }}" class="image-slider__img">
       </div>
     {% endfor %}
   </div>
