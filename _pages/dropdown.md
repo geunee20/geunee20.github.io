@@ -20,4 +20,3 @@ children:
   - title: News
     permalink: /news/
 ---
-
