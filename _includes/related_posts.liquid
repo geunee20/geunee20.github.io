@@ -1,24 +1,45 @@
-{% assign base_posts = site.articles %}
-{% assign max_related = site.related_blog_posts.max_related | default: base_posts.size | plus: 0 %}
+{% assign max_related = site.related_blog_posts.max_related | default: 5 %}
+{% assign max_window = max_related | plus: 1 %}
 {% assign have_related_posts = false %}
 {% assign shown_count = 0 %}
-{% assign selected_urls = '||' %}
 
-{% for post in site.articles %}
-  {% if shown_count >= max_related %}
-    {% break %}
+{% comment %}Sort posts oldest-first so index reflects chronological order{% endcomment %}
+{% assign all_posts = site.articles | sort: "date" %}
+{% assign total_posts = all_posts | size %}
+
+{% comment %}Find index of current post{% endcomment %}
+{% assign current_index = 0 %}
+{% for post in all_posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index0 %}
   {% endif %}
+{% endfor %}
 
-  {% if shown_count < max_related and post.redirect == blank and post.url != page.url %}
+{% comment %}Center the window around the current post{% endcomment %}
+{% assign half = max_related | divided_by: 2 %}
+{% assign start = current_index | minus: half %}
+{% if start < 0 %}
+  {% assign start = 0 %}
+{% endif %}
+{% assign max_start = total_posts | minus: max_window %}
+{% if max_start < 0 %}
+  {% assign max_start = 0 %}
+{% endif %}
+{% if start > max_start %}
+  {% assign start = max_start %}
+{% endif %}
+
+{% assign nearby_posts = all_posts | slice: start, max_window %}
+
+{% for post in nearby_posts %}
+  {% if post.url != page.url and post.redirect == blank and shown_count < max_related %}
     {% unless have_related_posts %}
       {% assign have_related_posts = true %}
-      {% if page.layout == 'post' %}
+      {% if page.layout == "post" %}
         <br>
         <hr>
         <br>
       {% endif %}
-
-      <!-- Adds related posts to the end of an article -->
       <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
       <p class="mb-2">Here are some more articles you might like to read next:</p>
       <ul class="list-disc pl-8">
@@ -29,41 +50,7 @@
     </li>
 
     {% assign shown_count = shown_count | plus: 1 %}
-    {% assign selected_urls = selected_urls | append: post.url | append: '||' %}
   {% endif %}
-{% endfor %}
-
-{% assign shuffled_posts = base_posts | shuffle %}
-{% for post in shuffled_posts %}
-  {% if shown_count >= max_related %}
-    {% break %}
-  {% endif %}
-
-  {% assign post_marker = '||' | append: post.url | append: '||' %}
-  {% unless selected_urls contains post_marker %}
-    {% if shown_count < max_related and post.redirect == blank and post.url != page.url %}
-      {% unless have_related_posts %}
-        {% assign have_related_posts = true %}
-        {% if page.layout == 'post' %}
-          <br>
-          <hr>
-          <br>
-        {% endif %}
-
-        <!-- Adds related posts to the end of an article -->
-        <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-        <p class="mb-2">Here are some more articles you might like to read next:</p>
-        <ul class="list-disc pl-8">
-      {% endunless %}
-
-      <li class="my-2">
-        <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
-
-      {% assign shown_count = shown_count | plus: 1 %}
-      {% assign selected_urls = selected_urls | append: post.url | append: '||' %}
-    {% endif %}
-  {% endunless %}
 {% endfor %}
 
 {% if have_related_posts %}
