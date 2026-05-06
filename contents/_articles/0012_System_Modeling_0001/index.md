@@ -15,34 +15,36 @@ images:
   slider: true
 ---
 
-Leadscrews are fundamental components in many mechanical systems, playing a crucial role in converting rotational motion into linear motion. From precision instruments to heavy machinery, leadscrews are ubiquitous in fields ranging from manufacturing to robotics. Understanding the dynamics of leadscrew systems is essential for engineers and designers aiming to optimize performance, improve efficiency, and enhance control in various applications.
+Leadscrews are fundamental components in many mechanical systems. They convert rotational motion into linear motion and are widely used in precision instruments, manufacturing equipment, robotic mechanisms, and positioning systems. Understanding the dynamics of a leadscrew system is important for predicting system response, designing controllers, estimating required motor torque, and evaluating the influence of load, damping, stiffness, and transmission efficiency.
 
-In this post, we'll examine the mathematical modeling of leadscrew systems. By deriving the equations of motion, we'll gain insights into how various factors influence the behavior of these systems. This understanding is crucial for predicting system response, designing control systems, and improving overall performance.
+In this post, we examine a simplified mathematical model of a leadscrew-driven translational system. The goal is to derive equations of motion that relate the applied motor torque to the resulting linear motion of the load.
+
+The model assumes forward-driving operation, where motor torque drives the screw and produces linear motion of the load. Direction-dependent friction, backlash, compliance of the screw/nut interface, and nonlinear friction effects are neglected unless they are explicitly represented through an efficiency factor.
 
 ### I. Key Parameters
 
-Before delving into the equations, let's define the key parameters in our leadscrew system:
+Before deriving the equations, we define the key parameters used in the leadscrew system.
 
-| Parameter               | Definition                        | Explanation                                             | Unit                |
-| ----------------------- | --------------------------------- | ------------------------------------------------------- | ------------------- |
-| $$J$$                   | Moment of inertia of the screw    | The screw's resistance to rotational acceleration       | $$kg\, m^2$$        |
-| $$B_r$$                 | Rotational damping coefficient    | Energy losses in rotational motion                      | $$N \, m \, s/rad$$ |
-| $$\theta$$              | Angular displacement of the screw | The screw's rotation angle                              | $$rad$$             |
-| $$T$$                   | Applied torque to the screw       | The rotational force driving the system                 | $$N \, m$$          |
-| $$T_{\text{friction}}$$ | Frictional torque                 | Torque opposing motion due to friction                  | $$N \, m$$          |
-| $$m$$                   | Mass of the load                  | The weight moved by the leadscrew                       | $$kg$$              |
-| $$b_t$$                 | Translational damping coefficient | Energy losses in linear motion                          | $$N \, s/m$$        |
-| $$k$$                   | Stiffness of the system           | The system's resistance to deformation                  | $$N/m$$             |
-| $$x$$                   | Linear displacement of the load   | The distance the load has moved                         | $$m$$               |
-| $$F$$                   | External force on the load        | Additional forces acting on the load                    | $$N$$               |
-| $$p$$                   | Pitch of the leadscrew            | Linear distance traveled per full rotation              | $$m/rev$$           |
-| $$\eta$$                | Efficiency of the leadscrew       | Effectiveness of converting rotational to linear motion | None                |
+| Parameter           | Definition                                             | Explanation                                                   | Unit            |
+| ------------------- | ------------------------------------------------------ | ------------------------------------------------------------- | --------------- |
+| $$J$$               | Moment of inertia of the screw and rotating components | Resistance of the rotating components to angular acceleration | $$kg\,m^2$$     |
+| $$B_r$$             | Rotational damping coefficient                         | Viscous energy loss in rotational motion                      | $$N\,m\,s/rad$$ |
+| $$\theta$$          | Angular displacement of the screw                      | Rotation angle of the screw                                   | $$rad$$         |
+| $$T$$               | Applied motor torque                                   | Torque applied to the screw                                   | $$N\,m$$        |
+| $$T_{\text{load}}$$ | Equivalent load torque reflected to the screw          | Torque required at the screw to generate the axial load force | $$N\,m$$        |
+| $$m$$               | Mass of the load                                       | Translational mass driven by the leadscrew                    | $$kg$$          |
+| $$b_t$$             | Translational damping coefficient                      | Viscous energy loss in linear motion                          | $$N\,s/m$$      |
+| $$k$$               | Translational stiffness                                | Equivalent stiffness acting on the load                       | $$N/m$$         |
+| $$x$$               | Linear displacement of the load                        | Translational displacement of the load                        | $$m$$           |
+| $$F$$               | Axial force on the load                                | Force transmitted to the load through the leadscrew           | $$N$$           |
+| $$p$$               | Pitch of the leadscrew                                 | Linear travel per full revolution                             | $$m/rev$$       |
+| $$\eta$$            | Forward-driving efficiency of the leadscrew            | Ratio of useful linear output work to rotational input work   | Dimensionless   |
 
 ### II. Equations
 
-Let's explore how these parameters interact to describe the behavior of our leadscrew system.
+We first write the rotational and translational equations separately, then connect them using the kinematic relationship between screw rotation and load displacement.
 
-##### **1. Rotational Equation of Motion**:
+##### **1. Rotational Equation of Motion**
 
 <div style="width: 60%; margin: 0 auto;">
 <div class="col-sm mt-3 mt-md-0">
@@ -50,26 +52,49 @@ Let's explore how these parameters interact to describe the behavior of our lead
 </div>
 </div>
 <div class="caption">
-    Figure 1. Bode Diagram of Rotation
+    Figure 1. Rotational dynamics diagram.
 </div>
 
-The rotational dynamics are described by:
+The rotational dynamics of the screw can be written as
 
-$$
-J\ddot{\theta} + B_r\dot{\theta} = T - T_{\text{friction}}
-$$
+\begin{equation}
+J\ddot{\theta} + B_r\dot{\theta} + T_{\text{load}} = T
+\label{eq:rotational_eom}
+\end{equation}
 
-Where $$\ddot{\theta}$$ is the angular acceleration, $$\dot{\theta}$$ is the angular velocity, and $$T_{\text{friction}}$$ is the frictional torque opposing motion.
+where $$\ddot{\theta}$$ is the angular acceleration, $$\dot{\theta}$$ is the angular velocity, and $$T_{\text{load}}$$ is the equivalent torque required to drive the axial load through the leadscrew.
 
-For a leadscrew, the frictional torque can be expressed as:
+For a forward-driving leadscrew, the useful linear work over one revolution is
 
-$$
-T_{\text{friction}} = \frac{F \cdot p}{2\pi \eta}
-$$
+\begin{equation}
+W_{\text{out}} = Fp
+\label{eq:output_work}
+\end{equation}
 
-This equation demonstrates how axial force ($$F$$) and leadscrew characteristics ($$p$$ and $$\eta$$) contribute to friction torque. For a detailed derivation, refer to the [Appendix I](/blog/2024/System-Modeling-001/#Frictional_Torque).
+and the rotational input work is
 
-##### **2. Translational Equation of Motion**:
+\begin{equation}
+W_{\text{in}} = T_{\text{load}}(2\pi)
+\label{eq:input_work}
+\end{equation}
+
+Using the efficiency definition
+
+\begin{equation}
+\eta = \frac{W_{\text{out}}}{W_{\text{in}}}
+\label{eq:efficiency_definition}
+\end{equation}
+
+we obtain
+
+\begin{equation}
+T_{\text{load}} = \frac{Fp}{2\pi\eta}
+\label{eq:equivalent_load_torque}
+\end{equation}
+
+This term is not purely a friction torque. It is the equivalent input torque required to generate the axial force $$F$$ while accounting for transmission efficiency.
+
+##### **2. Translational Equation of Motion**
 
 <div style="width: 40%; margin: 0 auto;">
 <div class="col-sm mt-3 mt-md-0">
@@ -77,145 +102,177 @@ This equation demonstrates how axial force ($$F$$) and leadscrew characteristics
 </div>
 </div>
 <div class="caption">
-    Figure 2. Bode Diagram of Translation
+    Figure 2. Translational dynamics diagram.
 </div>
 
-The linear motion of the load is described by:
+The linear motion of the load is described by
 
-$$
+\begin{equation}
 m\ddot{x} + b_t\dot{x} + kx = F
-$$
+\label{eq:translational_eom}
+\end{equation}
 
-Where $$\ddot{x}$$ is the linear acceleration, $$\dot{x}$$ is the linear velocity, and $$kx$$ represents any restoring force due to system stiffness.
+where $$\ddot{x}$$ is the linear acceleration, $$\dot{x}$$ is the linear velocity, and $$kx$$ is the restoring force due to the equivalent translational stiffness.
 
-##### **3. Relationship Between Rotational and Translational Motion**:
+##### **3. Relationship Between Rotational and Translational Motion**
 
-The connection between rotational and linear motion is captured by:
+The leadscrew kinematic relationship is
 
-$$
-x = \frac{p \theta}{2\pi}
-$$
+\begin{equation}
+x = \frac{p\theta}{2\pi},
+\qquad
+\dot{x} = \frac{p\dot{\theta}}{2\pi},
+\qquad
+\ddot{x} = \frac{p\ddot{\theta}}{2\pi}
+\label{eq:kinematic_relation}
+\end{equation}
 
-This equation relates angular displacement ($$\theta$$) to linear displacement ($$x$$). From this, we can derive velocity and acceleration relationships:
+Equivalently,
 
-$$
-\dot{x} = \frac{p \dot{\theta}}{2\pi}
-$$
-
-$$
-\ddot{x} = \frac{p \ddot{\theta}}{2\pi}
-$$
+\begin{equation}
+\theta = \frac{2\pi}{p}x,
+\qquad
+\dot{\theta} = \frac{2\pi}{p}\dot{x},
+\qquad
+\ddot{\theta} = \frac{2\pi}{p}\ddot{x}
+\label{eq:inverse_kinematic_relation}
+\end{equation}
 
 ### III. Combined Equation of Motion
 
-By combining these equations, we can express the system's behavior in both rotational and linear domains. For a detailed derivation, refer to the [Appendix II](/blog/2024/System-Modeling-001/#Combined_Equation).
+We now combine the rotational and translational dynamics to obtain a single equation of motion.
 
-##### **1. In terms of angular displacement ($$\theta$$)**:
+##### **1. In Terms of Angular Displacement ($$\theta$$)**
 
-$$
-\left(J + \frac{mp^2}{(2\pi)^2 \eta}\right)\ddot{\theta} + \left(B_r + \frac{b_t p^2}{(2\pi)^2 \eta}\right)\dot{\theta} + \frac{k p^2}{(2\pi)^2 \eta} \theta = T
-$$
+Using \eqref{eq:translational_eom} and the kinematic relationship in \eqref{eq:kinematic_relation}, the axial force can be written as
 
-##### **2. In terms of linear displacement ($$x$$)**:
+\begin{equation}
+F = \frac{p}{2\pi}
+\left(
+m\ddot{\theta}
++
+b_t\dot{\theta}
++
+k\theta
+\right)
+\label{eq:force_theta_domain}
+\end{equation}
 
-$$
-\left(J + \frac{mp^2}{(2\pi)^2 \eta}\right)\ddot{x} + \left(B_r + \frac{b_t p^2}{(2\pi)^2 \eta}\right)\dot{x} + \frac{k p^2}{(2\pi)^2 \eta} x = \frac{pT}{2\pi}
-$$
+Substituting \eqref{eq:force_theta_domain} into \eqref{eq:equivalent_load_torque} gives
 
-<a id="Frictional_Torque"></a>
+\begin{equation}
+T_{\text{load}}
+=
+\frac{p^2}{(2\pi)^2\eta}
+\left(
+m\ddot{\theta}
++
+b_t\dot{\theta}
++
+k\theta
+\right)
+\end{equation}
 
-# Appendix
+Substituting this result into \eqref{eq:rotational_eom} yields
 
-### I. Derivation of Frictional Torque in a Leadscrew
+\begin{equation}
+\left(
+J + \frac{mp^2}{(2\pi)^2\eta}
+\right)\ddot{\theta}
++
+\left(
+B_r + \frac{b_t p^2}{(2\pi)^2\eta}
+\right)\dot{\theta}
++
+\frac{k p^2}{(2\pi)^2\eta}\theta
+=
+T
+\label{eq:combined_rotational_domain}
+\end{equation}
 
-The equation for frictional torque ($$T_{\text{friction}}$$) in a leadscrew system relates the axial force $$F$$ applied to the load, the pitch of the leadscrew $$p$$, and the efficiency $$\eta$$ of the leadscrew. Let's break down this derivation step by step:
+Equation \eqref{eq:combined_rotational_domain} expresses the leadscrew-driven system in the rotational domain. The translational mass, damping, and stiffness are reflected to the screw side through the factor $$p^2/(2\pi)^2\eta$$.
 
-##### **1. Axial Force and Linear Motion**
+##### **2. In Terms of Linear Displacement ($$x$$)**
 
-In a leadscrew system, the axial force $$F$$ applied to the load results in linear motion along the screw's axis. The pitch $$p$$ represents the linear distance the nut moves for one complete rotation of the screw.
+Using the inverse kinematic relationship in \eqref{eq:inverse_kinematic_relation}, Eq. \eqref{eq:combined_rotational_domain} becomes
 
-##### **2. Work-Energy Relationship**
+\begin{equation}
+\left(
+J + \frac{mp^2}{(2\pi)^2\eta}
+\right)
+\frac{2\pi}{p}\ddot{x}
++
+\left(
+B_r + \frac{b_t p^2}{(2\pi)^2\eta}
+\right)
+\frac{2\pi}{p}\dot{x}
++
+\frac{k p^2}{(2\pi)^2\eta}
+\frac{2\pi}{p}x
+=
+T
+\label{eq:substituted_linear_domain}
+\end{equation}
 
-To understand the frictional torque, we need to consider the work done in the system:
+Multiplying both sides of \eqref{eq:substituted_linear_domain} by $$2\pi\eta/p$$ yields
 
-- Work done by torque (rotational):
-  $$W_T = T \cdot 2\pi$$
-  (where $$2\pi$$ represents one full rotation in radians)
+\begin{equation}
+\left(
+m + \frac{(2\pi)^2\eta J}{p^2}
+\right)\ddot{x}
++
+\left(
+b_t + \frac{(2\pi)^2\eta B_r}{p^2}
+\right)\dot{x}
++
+kx
+=
+\frac{2\pi\eta}{p}T
+\label{eq:combined_linear_domain}
+\end{equation}
 
-- Work done by force (linear):
-  $$W_F = F \cdot p$$
-  (where $$p$$ is the linear distance moved in one rotation)
+The coefficients in Eq. \eqref{eq:combined_linear_domain} correspond to the equivalent mass and damping reflected to the translational domain.
 
-##### **3. Efficiency Consideration**
+Therefore, the equivalent linear parameters are
 
-The efficiency $$\eta$$ accounts for energy losses due to friction and other factors. It's defined as the ratio of useful work output to input work:
+\begin{equation}
+m_{\text{eq}}
+=
+m + \frac{(2\pi)^2\eta J}{p^2}
+\label{eq:equivalent_mass}
+\end{equation}
 
-$$\eta = \frac{\text{Work Output}}{\text{Work Input}} = \frac{W_F}{W_T} = \frac{F \cdot p}{T_{\text{input}} \cdot 2\pi}$$
+\begin{equation}
+b_{\text{eq}}
+=
+b_t + \frac{(2\pi)^2\eta B_r}{p^2}
+\label{eq:equivalent_damping}
+\end{equation}
 
-Rearranging this equation, we can express the input torque needed:
+and
 
-$$T_{\text{input}} = \frac{F \cdot p}{2\pi \eta}$$
+\begin{equation}
+F_{\text{input}}
+=
+\frac{2\pi\eta}{p}T
+\label{eq:equivalent_input_force}
+\end{equation}
 
-<a id="Combined_Equation"></a>
+Thus, Eq. \eqref{eq:combined_linear_domain} can be written compactly as
 
-##### **4. Frictional Torque**
+\begin{equation}
+m_{\text{eq}}\ddot{x}
++
+b_{\text{eq}}\dot{x}
++
+kx
+=
+F_{\text{input}}
+\label{eq:compact_linear_domain}
+\end{equation}
 
-In the context of a leadscrew, the frictional torque $$T_{\text{friction}}$$ represents the torque required to overcome system friction and generate the necessary axial force $$F$$. This is equivalent to the efficiency-adjusted input torque:
+### IV. Remarks on Efficiency and Model Limitations
 
-$$T_{\text{friction}} = \frac{F \cdot p}{2\pi \eta}$$
+The equations above use a single constant efficiency $$\eta$$. This is a simplified representation of losses in the leadscrew transmission. In real leadscrew systems, friction may depend on load direction, speed, lubrication, preload, wear, and whether the system is forward-driving or backdriving.
 
-### II. Derivation of Combined Equation of Motion
-
-##### **1. Substitution into Translational Equation**
-
-We begin by substituting the expressions for $$x$$, $$\dot{x}$$, and $$\ddot{x}$$ into the translational equation of motion:
-
-$$
-m \ddot{x} + b_t \dot{x} + kx = F
-$$
-
-Substituting $$x = \frac{p \theta}{2\pi}$$, $$\dot{x} = \frac{p \dot{\theta}}{2\pi}$$, and $$\ddot{x} = \frac{p \ddot{\theta}}{2\pi}$$:
-
-$$
-m \left(\frac{p \ddot{\theta}}{2\pi}\right) + b_t \left(\frac{p \dot{\theta}}{2\pi}\right) + k \left(\frac{p \theta}{2\pi}\right) = F
-$$
-
-Simplifying:
-
-$$
-\frac{mp \ddot{\theta}}{2\pi} + \frac{b_t p \dot{\theta}}{2\pi} + \frac{kp \theta}{2\pi} = F
-$$
-
-##### **2. Incorporating Frictional Torque**
-
-Next, we substitute the expression for $$F$$ into the rotational equation of motion:
-
-$$
-J\ddot{\theta} + B_r\dot{\theta} = T - T_{\text{friction}}
-$$
-
-Recalling that $$T_{\text{friction}} = \frac{F \cdot p}{2\pi \eta}$$, we get:
-
-$$
-J\ddot{\theta} + B_r\dot{\theta} = T - \frac{F \cdot p}{2\pi \eta}
-$$
-
-Now, substituting the expression for $$F$$ from step 1:
-
-$$
-J\ddot{\theta} + B_r\dot{\theta} = T - \frac{p}{2\pi \eta} \left(\frac{mp \ddot{\theta}}{2\pi} + \frac{b_t p \dot{\theta}}{2\pi} + \frac{kp \theta}{2\pi}\right)
-$$
-
-##### **3. Combining and Simplifying**
-
-Grouping terms:
-
-$$
-\left(J + \frac{mp^2}{(2\pi)^2 \eta}\right)\ddot{\theta} + \left(B_r + \frac{b_t p^2}{(2\pi)^2 \eta}\right)\dot{\theta} + \frac{k p^2}{(2\pi)^2 \eta} \theta = T
-$$
-
-Using the relationship $$x = \frac{p \theta}{2\pi}$$, we derive:
-
-$$
-\left(J + \frac{mp^2}{(2\pi)^2 \eta}\right)\ddot{x} + \left(B_r + \frac{b_t p^2}{(2\pi)^2 \eta}\right)\dot{x} + \frac{k p^2}{(2\pi)^2 \eta} x = \frac{pT}{2\pi}
-$$
+Therefore, the model should be interpreted as a simplified dynamic model suitable for basic system analysis and controller design. For high-fidelity modeling, additional effects such as Coulomb friction, Stribeck friction, backlash, screw compliance, nut compliance, and direction-dependent efficiency may need to be included.
