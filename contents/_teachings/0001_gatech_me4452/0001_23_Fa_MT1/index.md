@@ -1,0 +1,13 @@
+---
+layout: page
+title: Fall 23' Midterm 1 Review Session
+permalink: /teachings/0001_gatech_me4452/0001_23_Fa_MT1/
+---
+
+[Go Back](/teaching)
+
+### Lecture Recording
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/lNJcj-s0UbM" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
