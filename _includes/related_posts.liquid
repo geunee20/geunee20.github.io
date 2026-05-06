@@ -4,7 +4,7 @@
 {% assign shown_count = 0 %}
 
 {% comment %}Sort posts oldest-first so index reflects chronological order{% endcomment %}
-{% assign all_posts = site.articles | sort: "date" %}
+{% assign all_posts = site.articles | sort: 'date' %}
 {% assign total_posts = all_posts | size %}
 
 {% comment %}Find index of current post{% endcomment %}
@@ -35,7 +35,7 @@
   {% if post.url != page.url and post.redirect == blank and shown_count < max_related %}
     {% unless have_related_posts %}
       {% assign have_related_posts = true %}
-      {% if page.layout == "post" %}
+      {% if page.layout == 'post' %}
         <br>
         <hr>
         <br>
