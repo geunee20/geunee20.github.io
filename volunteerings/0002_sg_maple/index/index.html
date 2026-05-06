@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h3 id="skku-global-mentoring-and-assisting-people">SKKU Global Mentoring and Assisting People</h3> <p><em>December 2015 - December 2016</em></p> <p>As a <a href="https://webzine-skku-edu.translate.goog/skkuzine/section/coverStory.do?mode=list&amp;articleNo=34199&amp;_x_tr_sl=ko&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" rel="external nofollow noopener" target="_blank">Student Buddy</a>, I organized and led diverse cultural exchange programs in Korea, including hiking excursions, participation in the World Food Festival, Seoul Tour Marathon, and visits to the Korean Folk Village. These initiatives not only facilitated cultural adaptation and integration for international students but also significantly enriched my appreciation of diverse cultures. Engaging with students from various backgrounds during these activities, I felt a profound sense of accomplishment and connection as we shared experiences and learned from each other. This role enhanced cross-cultural understanding and fostered a supportive international community, leaving me with lasting impressions of joy and mutual respect.</p> <div class="image-slider" id="slider_maple" data-autoplay-ms="3500" data-max-height-desktop="620" data-max-height-mobile="420"> <button type="button" class="image-slider__nav image-slider__nav--prev" aria-label="Previous slide">❮</button> <div class="image-slider__track"> <div class="image-slider__slide is-active"> <img src="/volunteerings/0002_sg_maple/assets/img/img_1.jpg" alt="Something went wrong" class="image-slider__img"> </div> <div class="image-slider__slide"> <img src="/volunteerings/0002_sg_maple/assets/img/img_2.jpg" alt="Something went wrong" class="image-slider__img"> </div> <div class="image-slider__slide"> <img src="/volunteerings/0002_sg_maple/assets/img/img_3.jpg" alt="Something went wrong" class="image-slider__img"> </div> <div class="image-slider__slide"> <img src="/volunteerings/0002_sg_maple/assets/img/img_4.jpg" alt="Something went wrong" class="image-slider__img"> </div> <div class="image-slider__slide"> <img src="/volunteerings/0002_sg_maple/assets/img/img_5.jpg" alt="Something went wrong" class="image-slider__img"> </div> <div class="image-slider__slide"> <img src="/volunteerings/0002_sg_maple/assets/img/img_6.jpg" alt="Something went wrong" class="image-slider__img"> </div> </div> <button type="button" class="image-slider__nav image-slider__nav--next" aria-label="Next slide">❯</button> <div class="image-slider__progress"><div class="image-slider__bar"></div></div> </div> <script>
+  (function () {
+    if (!document.getElementById('image-slider-shared-styles')) {
+      var style = document.createElement('style');
+      style.id = 'image-slider-shared-styles';
+      style.textContent =
+        '.image-slider{position:relative;width:100%;margin:0 auto;overflow:hidden;border-radius:8px}' +
+        '.image-slider__track{position:relative;width:100%;min-height:1px}' +
+        '.image-slider__slide{display:none;width:100%;box-sizing:border-box;justify-content:center;align-items:center}' +
+        '.image-slider__slide.is-active{display:flex}' +
+        '.image-slider__img{display:block;width:100%;height:auto}' +
+        '.image-slider__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;border:0;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;cursor:pointer;font-size:20px;line-height:1}' +
+        '.image-slider__nav--prev{left:12px}.image-slider__nav--next{right:12px}' +
+        '.image-slider__progress{position:relative;height:4px;background:rgba(0,0,0,.12)}' +
+        '.image-slider__bar{position:absolute;left:0;top:0;height:100%;width:0;background:#2f7a32;transition:width .3s ease}';
+      document.head.appendChild(style);
+    }
+
+    function initSlider(slider) {
+      if (!slider || slider.dataset.initialized === 'true') {
+        return;
+      }
+
+      var slides = slider.querySelectorAll('.image-slider__slide');
+      if (!slides.length) {
+        slider.dataset.initialized = 'true';
+        return;
+      }
+
+      var prev = slider.querySelector('.image-slider__nav--prev');
+      var next = slider.querySelector('.image-slider__nav--next');
+      var bar = slider.querySelector('.image-slider__bar');
+      var track = slider.querySelector('.image-slider__track');
+      var images = slider.querySelectorAll('.image-slider__img');
+      var autoplayMs = parseInt(slider.dataset.autoplayMs || '3500', 10);
+      var index = 0;
+      var timer = null;
+      var resizeTimer = null;
+
+      function render() {
+        slides.forEach(function (slide, i) {
+          slide.classList.toggle('is-active', i === index);
+        });
+        bar.style.width = ((index + 1) / slides.length) * 100 + '%';
+      }
+
+      function go(step) {
+        index = (index + step + slides.length) % slides.length;
+        render();
+      }
+
+      function stop() {
+        if (timer) {
+          window.clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function start() {
+        stop();
+        if (slides.length > 1) {
+          timer = window.setInterval(function () {
+            go(1);
+          }, autoplayMs);
+        }
+      }
+
+      function applyPaddedUniformHeight() {
+        var sliderWidth = slider.clientWidth;
+        if (!sliderWidth) {
+          return;
+        }
+
+        var desktopCap = parseInt(slider.dataset.maxHeightDesktop || '620', 10);
+        var mobileCap = parseInt(slider.dataset.maxHeightMobile || '420', 10);
+        var maxHeightCap = window.innerWidth < 768 ? mobileCap : desktopCap;
+
+        var measurements = [];
+        slides.forEach(function (slide) {
+          var img = slide.querySelector('.image-slider__img');
+          if (!img || !img.naturalWidth || !img.naturalHeight) {
+            return;
+          }
+
+          // Compute rendered height when image width fills slider width.
+          var renderedHeight = sliderWidth * (img.naturalHeight / img.naturalWidth);
+          measurements.push({ slide: slide, img: img, renderedHeight: renderedHeight });
+        });
+
+        if (!measurements.length) {
+          return;
+        }
+
+        var maxHeight = measurements.reduce(function (acc, m) {
+          return Math.max(acc, m.renderedHeight);
+        }, 0);
+
+        var targetHeight = Math.min(maxHeight, maxHeightCap);
+
+        measurements.forEach(function (m) {
+          // If an image is taller than cap, shrink width proportionally to keep aspect ratio.
+          var scale = Math.min(1, targetHeight / m.renderedHeight);
+          m.img.style.width = (scale * 100).toFixed(2) + '%';
+
+          var adjustedHeight = m.renderedHeight * scale;
+          var pad = Math.max(0, (targetHeight - adjustedHeight) / 2);
+          m.slide.style.paddingTop = pad.toFixed(2) + 'px';
+          m.slide.style.paddingBottom = pad.toFixed(2) + 'px';
+        });
+
+        track.style.minHeight = Math.ceil(targetHeight) + 'px';
+      }
+
+      function recalcOnResize() {
+        if (resizeTimer) {
+          window.clearTimeout(resizeTimer);
+        }
+        resizeTimer = window.setTimeout(applyPaddedUniformHeight, 120);
+      }
+
+      if (slides.length <= 1) {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+      }
+
+      prev.addEventListener('click', function () {
+        go(-1);
+        start();
+      });
+
+      next.addEventListener('click', function () {
+        go(1);
+        start();
+      });
+
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+      window.addEventListener('resize', recalcOnResize);
+
+      var imageReadyPromises = Array.prototype.map.call(images, function (img) {
+        if (img.complete && img.naturalWidth > 0) {
+          return Promise.resolve();
+        }
+
+        return new Promise(function (resolve) {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', resolve, { once: true });
+        });
+      });
+
+      Promise.all(imageReadyPromises).then(function () {
+        applyPaddedUniformHeight();
+      });
+
+      render();
+      start();
+      slider.dataset.initialized = 'true';
+    }
+
+    function initAll() {
+      var sliders = document.querySelectorAll('.image-slider');
+      sliders.forEach(initSlider);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAll, { once: true });
+    } else {
+      initAll();
+    }
+  })();
+</script> </body></html>
