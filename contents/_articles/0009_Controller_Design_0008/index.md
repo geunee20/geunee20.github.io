@@ -1,11 +1,11 @@
 ---
 layout: post
 permalink: /articles/0009_Controller_Design_0008/
-title: "[Controller Design] Day8: Sliding Mode Control"
+title: "[Controller Design] Day8 — Sliding Mode Control"
 date: 2024-07-29 00:00:00-0400
 description:
 tags: Simulink Sliding_Mode_Control
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0009_Controller_Design_0008/assets/img/00_thumbnail.png

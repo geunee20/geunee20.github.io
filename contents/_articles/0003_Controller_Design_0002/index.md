@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0003_Controller_Design_0002/
-title: "[Controller Design] Day 2: PID Controller"
+title: "[Controller Design] Day 2 — PID Controller"
 date: 2024-05-20 00:00:00-0400
 tags: Simulink PID
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0003_Controller_Design_0002/assets/img/00_thumbnail.png

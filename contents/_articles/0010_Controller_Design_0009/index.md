@@ -1,11 +1,11 @@
 ---
 layout: post
 permalink: /articles/0010_Controller_Design_0009/
-title: "[Controller Design] Day9: Model Predictive Control - Linearization & Euler Discretization"
+title: "[Controller Design] Day9 — Model Predictive Control - Linearization & Euler Discretization"
 date: 2024-08-07 00:00:00-0400
 description:
 tags: Simulink Model_Predictive_Control
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0010_Controller_Design_0009/assets/img/00_Thumbnail.png

@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0008_Controller_Design_0007/
-title: "[Controller Design] Day7: State Feedbak Control - LQR Controller and Energy Shaping"
+title: "[Controller Design] Day7 — State Feedbak Control - LQR Controller and Energy Shaping"
 date: 2024-07-09 00:00:00-0400
 tags: Simulink State_Feedback_Control Linear_Quadratic_Regulator Energy_Shaping_Control
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0008_Controller_Design_0007/assets/img/00_thumbnail.png

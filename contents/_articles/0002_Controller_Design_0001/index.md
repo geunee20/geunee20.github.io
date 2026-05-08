@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0002_Controller_Design_0001/
-title: "[Controller Design] Day 1: Creating the Multibody System Using Simscape"
+title: "[Controller Design] Day 1 — Creating the Multibody System Using Simscape"
 date: 2024-05-15 00:00:00-0000
 tags: Simulink Simscape
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0002_Controller_Design_0001/assets/img/00_thumbnail.gif

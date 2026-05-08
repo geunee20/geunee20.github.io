@@ -5,7 +5,7 @@ title: "[System Modeling] Leadscrew"
 date: 2024-08-26 00:00:00-0400
 description:
 tags: Equation_of_Motion Leadscrew
-categories: Study_with_Me System_Modeling
+categories: System_Modeling
 disqus_comments: true
 related_posts: true
 

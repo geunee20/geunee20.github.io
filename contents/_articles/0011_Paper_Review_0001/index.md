@@ -4,8 +4,8 @@ permalink: /articles/0011_Paper_Review_0001/
 title: "[Paper Review] Impedance Control and Performance Measure of Series Elastic Actuators"
 date: 2024-08-12 00:00:00-0400
 description:
-tags: Distributed_Control Impednace_Control Torque_Control Time_Delay
-categories: Study_with_Me Paper_Review
+tags: Distributed_Control Impedance_Control Torque_Control Time_Delay
+categories: Paper_Review
 disqus_comments: true
 related_posts: true
 

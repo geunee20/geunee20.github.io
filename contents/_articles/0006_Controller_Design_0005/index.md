@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0006_Controller_Design_0005/
-title: "[Controller Design] Day 5: PID Control with Computed Torque Method"
+title: "[Controller Design] Day 5 — PID Control with Computed Torque Method"
 date: 2024-06-03 00:00:00-0400
 tags: Simulink Computed_Torque_Method
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0006_Controller_Design_0005/assets/img/00_thumbnail.png

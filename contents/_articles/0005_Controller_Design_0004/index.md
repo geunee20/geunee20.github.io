@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0005_Controller_Design_0004/
-title: "[Controller Design] Day 4: PID Control with Gravity Compensation Method"
+title: "[Controller Design] Day 4 — PID Control with Gravity Compensation Method"
 date: 2024-05-28 00:00:00-0400
 tags: Simulink Gravity_Compensation_Method
-categories: Study_with_Me Controller_Design
+categories: Controller_Design
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0005_Controller_Design_0004/assets/img/00_thumbnail.png

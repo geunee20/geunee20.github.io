@@ -1,10 +1,10 @@
 ---
 layout: post
 permalink: /articles/0004_Controller_Design_0003/
-title: "[System Modeling] Day 3: The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
+title: "[System Modeling] Day 3 — The Equations of Motion and the Jacobians of the Triple-Link Mechanism"
 date: 2024-05-24 00:00:00-0400
 tags: Equation_of_Motion
-categories: Study_with_Me Controller_Design System_Modeling
+categories: System_Modeling
 disqus_comments: true
 related_posts: true
 thumbnail: /articles/0004_Controller_Design_0003/assets/img/00_thumbnail.png
