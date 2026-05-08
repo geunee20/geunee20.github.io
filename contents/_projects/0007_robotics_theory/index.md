@@ -13,39 +13,40 @@ permalink: /projects/0007_robotics_theory/
 {% comment %} Collect articles with ASBR category OR any of the 5 tags {% endcomment %}
 {% assign all_asbr = "" | split: "" %}
 {% for article in site.articles %}
-  {% assign in_asbr_cat = false %}
-  {% for cat in article.categories %}
-    {% if cat == "ASBR" %}
-      {% assign in_asbr_cat = true %}
-    {% endif %}
-  {% endfor %}
-  {% assign has_asbr_tag = false %}
-  {% for tag in article.tags %}
-    {% if asbr_tags contains tag %}
-      {% assign has_asbr_tag = true %}
-    {% endif %}
-  {% endfor %}
-  {% if in_asbr_cat or has_asbr_tag %}
-    {% assign all_asbr = all_asbr | push: article %}
-  {% endif %}
+{% assign in_asbr_cat = false %}
+{% for cat in article.categories %}
+{% if cat == "ASBR" %}
+{% assign in_asbr_cat = true %}
+{% endif %}
+{% endfor %}
+{% assign has_asbr_tag = false %}
+{% for tag in article.tags %}
+{% if asbr_tags contains tag %}
+{% assign has_asbr_tag = true %}
+{% endif %}
+{% endfor %}
+{% if in_asbr_cat or has_asbr_tag %}
+{% assign all_asbr = all_asbr | push: article %}
+{% endif %}
 {% endfor %}
 
 {% comment %} Untagged: matched via ASBR category but none of the 5 tags {% endcomment %}
 {% assign untagged = "" | split: "" %}
 {% for article in all_asbr %}
-  {% assign has_asbr_tag = false %}
-  {% for tag in article.tags %}
-    {% if asbr_tags contains tag %}
-      {% assign has_asbr_tag = true %}
-    {% endif %}
-  {% endfor %}
-  {% unless has_asbr_tag %}
-    {% assign untagged = untagged | push: article %}
-  {% endunless %}
+{% assign has_asbr_tag = false %}
+{% for tag in article.tags %}
+{% if asbr_tags contains tag %}
+{% assign has_asbr_tag = true %}
+{% endif %}
+{% endfor %}
+{% unless has_asbr_tag %}
+{% assign untagged = untagged | push: article %}
+{% endunless %}
 {% endfor %}
 
 {% assign untagged = untagged | sort: "date" | reverse %}
 {% if untagged.size > 0 %}
+
 <ul>
 {% for post in untagged %}
 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
@@ -62,6 +63,7 @@ permalink: /projects/0007_robotics_theory/
 {% endif %}
 {% endfor %}
 {% assign tag_articles = tag_articles | sort: "date" | reverse %}
+
 <h4>{{ tag | replace: "_", " " }}</h4>
 {% if tag_articles.size > 0 %}
 <ul>
