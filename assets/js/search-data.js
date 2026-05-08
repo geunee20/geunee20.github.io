@@ -59,52 +59,52 @@ ninja.data = [{
                 window.location.href = "/news/";
               },
             },{id: "articles-controller-design-day-0-kicking-off-the-controller-design-project",
-          title: '[Controller Design] Day 0: Kicking Off the Controller Design Project',
+          title: '[Controller Design] Day 0 — Kicking Off the Controller Design Project',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0001_Controller_Design_0000/";
             },},{id: "articles-controller-design-day-1-creating-the-multibody-system-using-simscape",
-          title: '[Controller Design] Day 1: Creating the Multibody System Using Simscape',
+          title: '[Controller Design] Day 1 — Creating the Multibody System Using Simscape',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0002_Controller_Design_0001/";
             },},{id: "articles-controller-design-day-2-pid-controller",
-          title: '[Controller Design] Day 2: PID Controller',
+          title: '[Controller Design] Day 2 — PID Controller',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0003_Controller_Design_0002/";
             },},{id: "articles-system-modeling-day-3-the-equations-of-motion-and-the-jacobians-of-the-triple-link-mechanism",
-          title: '[System Modeling] Day 3: The Equations of Motion and the Jacobians of the...',
+          title: '[System Modeling] Day 3 — The Equations of Motion and the Jacobians of...',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0004_Controller_Design_0003/";
             },},{id: "articles-controller-design-day-4-pid-control-with-gravity-compensation-method",
-          title: '[Controller Design] Day 4: PID Control with Gravity Compensation Method',
+          title: '[Controller Design] Day 4 — PID Control with Gravity Compensation Method',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0005_Controller_Design_0004/";
             },},{id: "articles-controller-design-day-5-pid-control-with-computed-torque-method",
-          title: '[Controller Design] Day 5: PID Control with Computed Torque Method',
+          title: '[Controller Design] Day 5 — PID Control with Computed Torque Method',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0006_Controller_Design_0005/";
             },},{id: "articles-controller-design-day-6-state-feedback-control-pole-placement-and-bang-bang",
-          title: '[Controller Design] Day 6: State Feedback Control - Pole Placement and Bang-Bang',
+          title: '[Controller Design] Day 6 — State Feedback Control - Pole Placement and Bang-Bang...',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0007_Controller_Design_0006/";
             },},{id: "articles-controller-design-day7-state-feedbak-control-lqr-controller-and-energy-shaping",
-          title: '[Controller Design] Day7: State Feedbak Control - LQR Controller and Energy Shaping',
+          title: '[Controller Design] Day7 — State Feedbak Control - LQR Controller and Energy Shaping...',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0008_Controller_Design_0007/";
             },},{id: "articles-controller-design-day8-sliding-mode-control",
-          title: '[Controller Design] Day8: Sliding Mode Control',
+          title: '[Controller Design] Day8 — Sliding Mode Control',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0009_Controller_Design_0008/";
             },},{id: "articles-controller-design-day9-model-predictive-control-linearization-amp-euler-discretization",
-          title: '[Controller Design] Day9: Model Predictive Control - Linearization &amp;amp; Euler Discretization',
+          title: '[Controller Design] Day9 — Model Predictive Control - Linearization &amp;amp; Euler Discretization',
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0010_Controller_Design_0009/";
@@ -118,6 +118,11 @@ ninja.data = [{
           description: "",
           section: "Articles",handler: () => {
               window.location.href = "/articles/0012_System_Modeling_0001/";
+            },},{id: "articles-asbr-day-0-algorithms-for-sensor-based-robotics",
+          title: '[ASBR] Day 0 — Algorithms for Sensor-Based Robotics',
+          description: "",
+          section: "Articles",handler: () => {
+              window.location.href = "/articles/0013_Robotics_Theory_0000/";
             },},{id: "news-began-pursuing-a-master-s-degree-in-mechanical-engineering-at-georgia-tech",
           title: 'Began pursuing a Master’s degree in Mechanical Engineering at Georgia Tech!',
           description: "",
@@ -169,6 +174,11 @@ ninja.data = [{
           description: "Exploring and implementing a spectrum of control strategies for inverted pendulum systems, from classical PID to advanced adaptive techniques",
           section: "Projects",handler: () => {
               window.location.href = "/projects/0006_controller_design/";
+            },},{id: "projects-algorithms-for-sensor-based-robotics-notes",
+          title: 'Algorithms for Sensor-Based Robotics Notes',
+          description: "From SE(3) to Surgical Robotics",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/0007_robotics_theory/";
             },},{id: "teachings-fall-23-39-midterm-1-review-session",
           title: 'Fall 23&amp;#39; Midterm 1 Review Session',
           description: "",
